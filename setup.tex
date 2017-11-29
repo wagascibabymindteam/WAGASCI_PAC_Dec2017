@@ -1,0 +1,115 @@
+\section{Experimental Setup}
+\textcolor{red}{This is copied from T59 proposal. Should be updated.}
+Fig. \ref{fig:all_detector} shows a schematic view of the entire set of detectors.
+A central detector contains the neutrino target materials, water and hydrocarbon, and plastic scintillator bars,
+and is placed along the beam direction.
+% The muon range detectors (MRDs) consist of one detector in the side region and one detector in the downstream region
+% around the central detector.
+The muon range detectors (MRDs) consist of one to four detectors in the side region and one detector in the downstream region
+around the central detector.
+% The number of the MRDs in the side region will be decided later.
+MC studies in this proposal is performed assuming that one MRD is placed in the side region.
+% and each detector consists of a sandwich structure of iron plates and tracking scintillator planes.
+% One of four $\mu$ range detectors in the side region is shown in the Fig. \ref{fig:all_detector}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+Schematic view of entire sets of detectors.
+}
+\label{fig:all_detector}
+\end{figure}
+
+
+The dimension of the central detector is 100cm $\times$ 100cm in the x and y directions
+and 200cm along the beam direction.
+The total water and hydrocarbon masses serving as neutrino targets are $\sim$1 ton each.
+Inside the central detector, plastic scintillator bars are aligned as a 3D grid-like structure, shown in Fig. \ref{fig:3dgrid},
+and spaces in the structure are filled with the neutrino target materials, water and hydrocarbon.
+When neutrinos interact with hydrogen, oxygen or carbon, in water and hydrocarbon,
+charged particles are generated.
+Neutrino interactions are identified by detecting tracks of charged particles through plastic scintillation bars.
+Thanks to the 3 D grid-like structure of the scintillator bars, 
+the central detector has $4\pi$ angular acceptance for charged particles.
+Furthermore, adopting a 2.5cm grid spacing, short tracks originated from protons and charged pions can be reconstructed
+with high efficiency.
+Thin plastic scintillator bars (thickness $\sim 0.3$cm) will be used for the central detector
+to reduce  the mass ratio of scintillator bars to neutrino target materials,
+because neutrino interactions in the scintillator bars are a background for the cross section measurements.
+Scintillator bars whose dimensions are 2.5cm x 0.3cm x 100cm will be used for the central detector.
+The total number of channels in the central detector is 12880.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/3d_grid_detector.pdf}
+\end{center}
+\caption{
+Schematic view of 3D grid-like structure of plastic scintillator bars inside the central detector.
+}
+\label{fig:3dgrid}
+\end{figure}
+
+
+The dimension of the MRD in the side (downstream) region is
+$\sim$200(200)cm $\times$ $\sim$300(350)cm in a plane perpendicular to the muon direction
+and $\sim$75(230)cm along the muon direction.
+The MRD in the side (downstream) region consists of 12(30) 3 cm thick iron plates and 14(32) tracking scintillator planes.
+Muons generated at smaller angle to the beam axis have higher momentum,
+so the MRD in the downstream region is thicker along the muon direction.
+Each tracking scintillator layer of the MRD in the side (downstream) region
+has 25(28) scintillator bars whose dimensions are 20cm x 1cm x 200(200)cm and 20cm x 1cm x 300(350)cm,
+making a plane measuring 300(350)$\times$200(200)cm$^{2}$ in the horizontal and vertical directions and 2 cm along the muon direction.
+The total number of channels in the MRD is 1246.
+The role of the MRDs is the selection of muon tracks from the charged-current (CC) interactions
+and the rejection of short tracks caused by neutral particles 
+%from outside the central detector,
+that originate mainly from neutrino interactions in material surrounding the central detector, like the walls of the detector hall,
+neutrons and gammas, or neutral-current (NC) interactions.
+The muon momentum can be reconstructed from its range inside the detector.
+The MRDs are located 50cm away from the central detector
+to identify the direction of motion of charged particles from the hit-time difference between the two detectors,
+and reject charged-particle background
+that originates from neutrino interactions in the material surrounding the central detector, like the walls of the detector hall and the MRDs themselves.
+% from outside the central detector.
+% which originate from neutrino interactions in the walls of the experimental hall and the $\mu$ range detector.
+
+
+Scintillation light in the scintillator bar is collected and transported to a photodetector with a wavelength shifting fiber (WLS fiber).
+The light is read out by a photodetector, Multi-Pixel Photon Counter (MPPC), attached to one end of the WLS fiber.
+The signal from the MPPC is read out by the dedicated electronics developed for the test experiment
+%developed by our group 
+to enable bunch separation in the beam spill.
+The readout electronics is triggered using the beam-timing signal from MR to synchronize to the beam.
+The beam-timing signal is branched from those for T2K, and will not cause any effect on the T2K data taking.
+
+
+T2K is adopting the off-axis beam method, in which
+the neutrino beam is directed 2.5 degrees away from SK producing a narrowband $\nu_{\mu}$ beam.
+The off-axis near detector, ND280, is installed towards the SK direction in the B1 floor of the near detector hall of the J-PARC neutrino beam-line.
+We are planning to install our detector in the B2 floor of the near detector hall, 
+where the off-axis angle is similar, and therefore an energy spectrum similar to ND280 and SK is expected.
+The candidate detector position in the B2 floor is shown in Fig. \ref{fig:location}.
+The expected neutrino energy spectrum at the candidate position is shown in Fig. \ref{fig:b2flux}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/location2.pdf}
+\end{center}
+\caption{
+Candidate detector position in the B2 floor of the near detector hall.
+}
+\label{fig:location}
+\end{figure}
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/b2flux2.pdf}
+\end{center}
+\caption{
+Neutrino energy spectrum at the candidate detector position(red).
+The spectrum at the ND280 site (black) is also shown.
+}
+\label{fig:b2flux}
+\end{figure}
