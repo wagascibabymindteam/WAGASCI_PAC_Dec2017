@@ -4,6 +4,11 @@ We had submitted a proposal of a test experiment to test a new detector with a w
  Fist, the start time of neutrino beam measurement is changed from December 2015 to October 2017, and the requested neutrino beam is changed from $1\times10^{21}$ POT of $\nu$ beam to $0.8\times10^{21} $POT of anti-$\nu$ beam. 
  Second, the detector configuration is changed. In the original proposal, central neutrino detector are expected to be surrounded by newly developed muon-range detectors (MRDs), but we will use spare neutrino detectors of the T2K experiment instead of them during neutrino beam measurement from October to December 2017. Construction of the newly developed MRDs, Baby-MIND and Side-MRD, is in progress, and they will be installed to the both sides and the downstream of the central neutrino detector from January to March 2018. Then, we will resume neutrino beam measurements from March 2018 and will take the neutrino beam data until May 2018.
 
+
+\subsection{On-axis beam measurement with Prototype detector}
+Add INGRID water module measurement here.
+
+
 \subsection{Plans from October 2017 to May 2018}
 J-PARC MR will extract its proton beam to T2K neutrino beam-line from October to December 2017, and, from March to May 2018. T2K experiment will produce anti-neutrino beam and will accumulate $\sim8\times10^{20}$ POT data during the above period.
 
@@ -14,8 +19,7 @@ We had submitted a proposal to use these spare neutrino detectors for the T59 ne
 
  \begin{figure}[tbh]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{fig/tmp.pdf}
-% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\includegraphics[width=0.8\linewidth]{fig/t59_det_config_oct_dec_2017.pdf}
 \end{center}
 \caption{
 J-PARC T59 detector configuration from Oct. to Dec. 2017
@@ -26,8 +30,7 @@ J-PARC T59 detector configuration from Oct. to Dec. 2017
 
 \begin{figure}[tbh]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{fig/tmp.pdf}
-% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\includegraphics[width=0.8\linewidth]{fig/t59_det_location_oct_dec_2017.pdf}
 \end{center}
 \caption{
 J-PARC T59 detector location from Oct. to Dec. 2017
@@ -36,7 +39,8 @@ J-PARC T59 detector location from Oct. to Dec. 2017
 \end{figure}
 
 
-During the beam measurements from March to May 2018, Baby-MIDN and two side muon-range detector (Side-MRD) modules will be installed on the downstream and the both sides of the WAGASCI detector, as shown in Fig. \ref{fig:det_config_mar_may2018}, to increase angular acceptance for secondary charged particles from neutrino interactions.
+During the beam measurements from March to May 2018, Baby-MIND and two side muon-range detector (Side-MRD) modules will be installed on the downstream and the both sides of the WAGASCI detector, as shown in Fig. \ref{fig:det_config_mar_may2018}, to increase angular acceptance for secondary charged particles from neutrino interactions.
+Add Baby-MIND commissioning items here!!!
  
 \begin{figure}[tbh]
 \begin{center}
@@ -45,7 +49,31 @@ During the beam measurements from March to May 2018, Baby-MIDN and two side muon
 \end{center}
 \caption{
 J-PARC T59 detector configuration with Baby-MIND and two Side-MRD modules from Mar. to May 2018.
-}
+(Need to prepare the figure.)}
 \label{fig:det_config_mar_may2018}
 \end{figure}
+
+
+Expected number of neutrino events in the WAGASCI detector during the above beam period is evaluated with Monte Carlo simulations. 
+Neutrino beam flux at the detector location is simulated by T2K neutrino flux generator, JNUBEAM, neutrino interactions with target materials are simulated by a neutrino interaction simulator, NEUT, detector responses are simulated using GEANT4-based simulation. 
+The neutrino flux at the detector location, 1.5 degrees away from the J-PARC neutrino beam axis, is shown in Figure \ref{fig:b2flux}, and its mean neutrino energy is around 0.68 GeV.
+An event display of the GEANT4-based detector simulation is shown in Figure \ref{fig:t59_event_display_oct_dec_2017}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/t59_event_display_oct_dec_2017.pdf}
+% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+J-PARC T59 event display of a neutrino event in the GENAT4-based detector simulation.
+}
+\label{fig:t59_event_display_oct_dec_2017}
+\end{figure}
+
+
+To perform the detector performance test, the following event selections are applied to the data. 
+First, track reconstructions are performed in the WAGASCI detector, and the reconstructed vertex is required to be inside a defined fiducial volume, $80 \times80 \times 32$ cm$^{3}$ region at the center of the detector, to reduce contamination from external backgrounds. 
+Second, at least one charged particle is required to reach to INGRID standard module or Side-MRD modules, and it makes more than two hits in these sub-detectors. 
+With the event selection, expected numbers of the neutrino-candidate events during the beam period are summarized in Table 1. 
+Using the data, we will test the detector performance with $\sim3$\% statistical uncertainties.
 
