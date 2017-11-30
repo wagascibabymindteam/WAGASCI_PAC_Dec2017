@@ -1,0 +1,649 @@
+%\documentclass[12pt]{amsart}
+\documentclass[10pt]{article}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+% \usepackage{epsfig}
+\usepackage[dvipdfmx]{graphicx}               %%% to include graphics
+\usepackage[blocks, affil-it]{authblk}
+% \usepackage{lineno}
+% \linenumbers
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+\title{A test experiment to develop a 3D grid-like neutrino detector with a water target
+for measurement of neutrino cross sections at the near detector hall of J-PARC neutrino beam-line}
+
+
+% \author{A. Minamino}
+% \date{} % delete this line to display the current date
+
+\author{A.\,Bonnemaison}
+\author{O.\,Drapier}
+\author{O.\,Ferreira}
+\author{M.\,Gonin}
+\author{Th.A.\,Mueller}
+\author{B.\,Quilain}
+
+\affil{Ecole Polytechnique, IN2P3-CNRS, Laboratoire Leprince-Ringuet, Palaiseau, France }
+
+
+\author{I.\,Ayzenberg}
+\author{A.\,Izmaylov}
+\author{I.\,Karpikov}
+\author{M.\,Khabibullin}
+\author{A.\,Khotjantsev}
+\author{Y.\,Kudenko}
+\author{S.\,Martynenko}
+\author{A.\,Mefodiev}
+\author{O.\,Mineev}
+\author{T.\,Ovsjannikova}
+\author{S.\,Suvorov}
+\author{N.\,Yershov}
+
+\affil{Institute for Nuclear Research of the Russian Academy of Sciences, Moscow, Russia}
+
+
+\author{T.\,Hayashino}
+\author{A.K.\,Ichikawa}
+\author{A.\,Minamino}
+\author{K.\,Nakamura}
+\author{T.\,Nakaya}
+\author{K.\,Yoshida}
+
+\affil{Kyoto University, Department of Physics, Kyoto, Japan}
+
+
+\author{Y.\,Seiya}
+\author{K.\,Wakamatsu}
+\author{K.\,Yamamoto}
+
+\affil{Osaka City University, Department of Physics, Osaka, Japan}
+
+
+\author{N.\,Chikuma}
+\author{T.\,Koga}
+\author{M.\,Yokoyama}
+
+\affil{University of Tokyo, Department of Physics, Tokyo, Japan}
+
+
+\author{Y.\,Hayato}
+
+\affil{University of Tokyo, Institute for Cosmic Ray Research, Kamioka Observatory, Kamioka, Japan}
+
+
+
+
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+% \tableofcontents
+
+\newpage
+
+\begin{abstract}
+We propose a test experiment to develop a new neutrino detector with a water target
+at the near detector hall of J-PARC neutrino beamline.
+
+
+In this experiment, we will develop a 3D grid-like neutrino detector and test its basic performance
+to measure neutrino cross sections on water with high precision using a neutrino beam.
+Once the performance is proved to be as expected,
+we will be able to measure the water to hydrocarbon charged current cross section ratio with 3\% precision
+using the detector, which may be used to reduce the uncertainty on neutrino cross sections for T2K oscillation analyses.
+
+
+% We propose a test experiment to measure neutrino cross sections 
+% using a 3D grid-like neutrino detector with a  water target at the near detector hall of J-PARC neutrino beam-line.
+% 
+%
+% In this experiment, we will develop a 3D grid-like neutrino detector
+% and test basic performance of the detector to measure neutrino cross sections on water with high precision using a neutrino beam, pedestal and cosmic-ray data.
+% Once the performance is proved to be as expected,
+%we will measure the water to hydrocarbon charged current cross section ratio with 3\% precision using the detector.
+%The purpose of the cross section measurement is to reduce uncertainty on neutrino cross sections for T2K oscillation analyses.
+% In the test experiment, we will develop a 3D grid-like neutrino detector
+% and test a capability of measuring neutrino cross sections on water with high precision.
+% In the test experiment, we will measure cross sections ratios on water to  hydrocarbon for inclusive and exclusive channels
+% with high precision to reduce uncertainty on neutrino cross section for T2K oscillation analyses.
+\end{abstract}
+
+
+
+% \newpage
+% \section{Collaborator list}
+% あとでいれる
+
+\section{Motivation}
+\label{sec1}
+The T2K (Tokai-to-Kamioka) experiment is a long baseline neutrino oscillation experiment.
+In 2013,
+T2K made the first observation of electron neutrino appearance in a muon neutrino beam with a 7.3$\sigma$ significance
+and constrained the CP violating phase $\delta_{CP}$ 
+based on a data set corresponding to 8.4\% of the approved delivered Protons On Target (POT) \cite{t2k_app}.
+T2K will aim to measure CP violation ($\sin \delta_{CP} \neq 0$) with increasing POT.
+
+
+T2K uses Super-Kamiokande (SK) as the far detector to measure neutrino interactions at a distance of 295 km from the accelerator,
+and near detectors at J-PARC to sample the neutrino flux just after production.
+The near detectors consist of an on-axis Interactive Neutrino Grid detector (INGRID)
+and an off-axis detector, ND280.
+Uncertainties on neutrino flux and cross sections for T2K oscillation analyses are largely constrained by the ND280 measurement.
+However, systematic parameters for neutrino cross sections, which are target nuclei dependent,  cannot be constrained by the ND280 measurement because the target nuclei in SK, water, are different from the primary target nuclei of ND280, hydrocarbon.
+The uncertainty (rms/mean in \%) on the predicted number of signal $\nu_{e}$ events
+for each group of systematic uncertainties in the $\nu_{e}$ appearance analysis \cite{t2k_app} is shown in Table \ref{tab:t2k_nue_errors}.
+In order to fully exploit the statistical power, there is an urgent need to reduce target-nuclei-dependent neutrino cross section errors.
+Neutrino interaction models predict that the target nuclei dependence is small, but there is no measurement to confirm the predictions so far.
+Therefore, if a water to hydrocarbon cross section ratio is measured with high precision, 
+the target-nuclei-dependent errors can be constrained by the ND280 measurement.
+The ND280 has water target regions, and there are ongoing efforts in the ND280 to measure neutrino cross sections on water
+in order to reduce target-nuclei-dependent neutrino cross section errors.
+
+\begin{table}[htdp]
+\caption{Uncertainty (rms/mean in \%) on the predicted number of signal $\nu_{e}$ events for each group of systematic uncertainties
+for $\sin^{2}2\theta_{13} = 0.1$ and $\sin^{2}2\theta_{13} = 0$ in the $\nu_{e}$ appearance analysis \cite{t2k_app}.
+}
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+\hline
+Error souce [\%] & $\sin^{2}2\theta_{13} = 0.1$ & $\sin^{2}2\theta_{13}=0$ \\
+\hline
+Beam flux and $\nu$ interaction & 2.9 & 4.8 \\
+Target-nuclei-dependent $\nu$ interaction & 7.5 & 6.8 \\
+Far detector performance & 3.5 & 7.3 \\
++ $\pi$ interactions & & \\
+\hline
+Total &  8.8 & 11.1 \\
+\hline
+\hline
+\end{tabular}
+\label{tab:t2k_nue_errors}
+\end{center}
+\end{table}%
+
+
+
+% We have measured a $\nu_{\mu}$ charged current cross section ratio on iron to hydrocarbon for a mean neutrino energy of 1.51 GeV 
+% with 3\% precision using the on-axis near detector, INGRID.
+We measured the $\nu_{\mu}$ inclusive charged current cross section at neutrino energies around 1 GeV on iron and hydrocarbon
+using the on-axis near detector, INGRID.
+INGRID consists of 16 identical standard modules and a variant module called Proton Module.
+Each standard module has a sandwich structure of iron target plates and scintillator trackers. 
+On the other hand, the Proton Module is a fully-active tracking detector which consists of only scintillator trackers.
+The Proton Module is located at the beam center between the horizontal and vertical standard modules (Fig. \ref{fig:proton_mod}).
+The measured inclusive charged current cross section on iron is $(1.4444\pm0.023(stat.)^{+0.1901}_{-0.1571}(syst.))\times10^{-38}$cm$^{2}$/nucleon, that on hydrocarbon is $(1.3790\pm0.085(stat.)^{+0.1808}_{-0.1503}(syst.))\times10^{-38}$cm$^{2}$/nucleon,
+and their ratio is $1.0474\pm0.0067(stat.)^{+0.0265}_{-0.0256}(syst.)$ for a mean neutrino energy of 1.51 GeV\cite {ingrid_ccinc}.
+% We have achieved 3\% precision for the cross section ratio measurement.
+In the cross section ratio measurement, we have canceled the dominant systematic error, the neutrino flux error, by comparing the cross-section results from two modules, the horizontal center standard module and the Proton Module, which have different target nuclei but almost identical neutrino fluxes, and 3\% precision is achieved.
+The result of the cross section ratio measurement agrees well with the predicted values from neutrino interaction models, 
+NEUT\cite{neut} and GENIE\cite{genie} as shown in Fig. \ref{fig:ingrid_ccinc_ratio}.
+
+
+In the test experiment, we will develop a new neutrino detector to measure neutrino cross sections on water and hydrocarbon
+with high precision and large angular acceptance.
+A new idea, a 3D grid-like structure of scintillator bars, is adopted 
+to detect tracks of charged particles with $4\pi$ angular acceptance and high efficiency.
+Advantages of this detector over the ND280 are larger angular acceptance and larger mass ratio of water to scintillator bars. 
+We have two goals in this test experiment.
+The first goal is to test the basic performance of the detector, such as track reconstruction efficiency and particle identification capability
+using neutrino beam data,
+and confirm the capability of measuring the cross section. % with target precision.
+Once the performance is proved to be as expected,
+the second goal is to measure the water to hydrocarbon charged current cross section ratio with 3\% precision, 
+using the analysis technique established in the INGRID measurement.
+% Once the performance is proved as expected,
+% we will measure a charged current cross section ratio on water to hydrocarbon with 3\% precision using the detector.
+The purpose of the cross section measurement is to reduce the uncertainty on neutrino cross sections for T2K oscillation analyses.
+% This is why some of T2K collaborators are advancing the test experiment.
+In order to achieve the above goals of the experiment, 
+we would like to use the B2 floor of the near detector hall of J-PARC neutrino beam-line
+as a test facility of the neutrino beam.
+We request $1 \times 10^{21}$ POT of $\nu$ (not anti-$\nu$) beam for the test experiment.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/proton_mod.pdf}
+\end{center}
+\caption{
+The position of the Proton Module viewed from above.
+}
+\label{fig:proton_mod}
+\end{figure}
+
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/ingrid_ccinc_ratio.pdf}
+\end{center}
+\caption{
+The inclusive $\nu_{\mu}$ charged current cross section ratio on iron to hydrocarbon with prediction by neutrino interaction models,
+NEUT and GENIE.
+}
+\label{fig:ingrid_ccinc_ratio}
+\end{figure}
+
+
+% \section{Goals of the test experiment}
+% We request $\sim 1 \times 10^{21}$ POT of $\nu$-enhanced (not anti-$\nu$-enhanced) beam for the test experiment.
+% Assuming 250kW beam operation, it corresponds to $\sim$ 100 days of data taking.
+% Using the data set, 
+% we will measure the following cross sections.
+% \begin{itemize}
+% \item $\nu_{\mu}$ charged current cross section ratios on water to hydrocarbon with 3\% precision for inclusive and exclusive channels (CC-inclusive, CCQE, CC1$\pi$, ...)
+% \item absolute $\nu_{\mu}$ charged current cross sections on water with 10-15\% precision  for inclusive and exclusive channels (CC-inclusive, CCQE, CC1$\pi$, ...)
+% \item absolute $\nu_{\mu}$ charged current cross sections on hydrocarbon with 10-15\% precision for inclusive and exclusive channels (CC-inclusive, CCQE, CC1$\pi$, ...)
+% \end{itemize}
+% 
+%
+% If we have anti-$\nu$-enhanced beam during the test experiment, we will also measure the following cross sections.
+% (The T2K neutrino beamline can generate an anti-$\nu$-enhanced beam by reversing the polarity of the horns.)
+% The target uncertainties in the anti-$\nu$ cross section measurements include no statistical error.
+% \begin{itemize}
+% \item anti-$\nu_{\mu}$ charged current quasi-elastic (CCQE) cross section ratios on water to hydrocarbon with 3\% precision 
+% \item absolute anti-$\nu_{\mu}$ charged current quasi-elastic (CCQE) cross sections on water with 10-15\% precision
+% \item absolute anti-$\nu_{\mu}$ charged current quasi-elastic (CCQE) cross sections on hydrocarbon with 10-15\% precision
+% \end{itemize}
+% In the anti-$\nu_{\mu}$ CCQE cross section measurements, the signal is $\overline{\nu}_{\mu} + p \rightarrow \mu^{+} + n$,
+% and $\mu^{+}$ is the only charged particle at the interaction vertex.
+% This feature enables us to distinguish the signal
+% from main backgrounds, anti-$\nu_{\mu}$ CCnonQE and $\nu_{\mu}$ CC interactions, which have charged particles other than $\mu$
+% at the interaction vertex.
+% Once we achieve the goals in the test experiment, then another proposal to continue to use the detector as a part of near detector
+% in T2K will be submitted to appropriate bodies, i.e. IPNS-PAC and T2K.
+
+
+\section{Experimental method}
+\label{sec2}
+Fig. \ref{fig:all_detector} shows a schematic view of the entire set of detectors.
+A central detector contains the neutrino target materials, water and hydrocarbon, and plastic scintillator bars,
+and is placed along the beam direction.
+% The muon range detectors (MRDs) consist of one detector in the side region and one detector in the downstream region
+% around the central detector.
+The muon range detectors (MRDs) consist of one to four detectors in the side region and one detector in the downstream region
+around the central detector.
+% The number of the MRDs in the side region will be decided later.
+MC studies in this proposal is performed assuming that one MRD is placed in the side region.
+% and each detector consists of a sandwich structure of iron plates and tracking scintillator planes.
+% One of four $\mu$ range detectors in the side region is shown in the Fig. \ref{fig:all_detector}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+Schematic view of entire sets of detectors.
+}
+\label{fig:all_detector}
+\end{figure}
+
+
+The dimension of the central detector is 100cm $\times$ 100cm in the x and y directions
+and 200cm along the beam direction.
+The total water and hydrocarbon masses serving as neutrino targets are $\sim$1 ton each.
+Inside the central detector, plastic scintillator bars are aligned as a 3D grid-like structure, shown in Fig. \ref{fig:3dgrid},
+and spaces in the structure are filled with the neutrino target materials, water and hydrocarbon.
+When neutrinos interact with hydrogen, oxygen or carbon, in water and hydrocarbon,
+charged particles are generated.
+Neutrino interactions are identified by detecting tracks of charged particles through plastic scintillation bars.
+Thanks to the 3 D grid-like structure of the scintillator bars, 
+the central detector has $4\pi$ angular acceptance for charged particles.
+Furthermore, adopting a 2.5cm grid spacing, short tracks originated from protons and charged pions can be reconstructed
+with high efficiency.
+Thin plastic scintillator bars (thickness $\sim 0.3$cm) will be used for the central detector
+to reduce  the mass ratio of scintillator bars to neutrino target materials,
+because neutrino interactions in the scintillator bars are a background for the cross section measurements.
+Scintillator bars whose dimensions are 2.5cm x 0.3cm x 100cm will be used for the central detector.
+The total number of channels in the central detector is 12880.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/3d_grid_detector.pdf}
+\end{center}
+\caption{
+Schematic view of 3D grid-like structure of plastic scintillator bars inside the central detector.
+}
+\label{fig:3dgrid}
+\end{figure}
+
+
+The dimension of the MRD in the side (downstream) region is
+$\sim$200(200)cm $\times$ $\sim$300(350)cm in a plane perpendicular to the muon direction
+and $\sim$75(230)cm along the muon direction.
+The MRD in the side (downstream) region consists of 12(30) 3 cm thick iron plates and 14(32) tracking scintillator planes.
+Muons generated at smaller angle to the beam axis have higher momentum,
+so the MRD in the downstream region is thicker along the muon direction.
+Each tracking scintillator layer of the MRD in the side (downstream) region
+has 25(28) scintillator bars whose dimensions are 20cm x 1cm x 200(200)cm and 20cm x 1cm x 300(350)cm,
+making a plane measuring 300(350)$\times$200(200)cm$^{2}$ in the horizontal and vertical directions and 2 cm along the muon direction.
+The total number of channels in the MRD is 1246.
+The role of the MRDs is the selection of muon tracks from the charged-current (CC) interactions
+and the rejection of short tracks caused by neutral particles 
+%from outside the central detector,
+that originate mainly from neutrino interactions in material surrounding the central detector, like the walls of the detector hall,
+neutrons and gammas, or neutral-current (NC) interactions.
+The muon momentum can be reconstructed from its range inside the detector.
+The MRDs are located 50cm away from the central detector
+to identify the direction of motion of charged particles from the hit-time difference between the two detectors,
+and reject charged-particle background
+that originates from neutrino interactions in the material surrounding the central detector, like the walls of the detector hall and the MRDs themselves.
+% from outside the central detector.
+% which originate from neutrino interactions in the walls of the experimental hall and the $\mu$ range detector.
+
+
+Scintillation light in the scintillator bar is collected and transported to a photodetector with a wavelength shifting fiber (WLS fiber).
+The light is read out by a photodetector, Multi-Pixel Photon Counter (MPPC), attached to one end of the WLS fiber.
+The signal from the MPPC is read out by the dedicated electronics developed for the test experiment
+%developed by our group 
+to enable bunch separation in the beam spill.
+The readout electronics is triggered using the beam-timing signal from MR to synchronize to the beam.
+The beam-timing signal is branched from those for T2K, and will not cause any effect on the T2K data taking.
+
+
+T2K is adopting the off-axis beam method, in which
+the neutrino beam is directed 2.5 degrees away from SK producing a narrowband $\nu_{\mu}$ beam.
+The off-axis near detector, ND280, is installed towards the SK direction in the B1 floor of the near detector hall of the J-PARC neutrino beam-line.
+We are planning to install our detector in the B2 floor of the near detector hall, 
+where the off-axis angle is similar, and therefore an energy spectrum similar to ND280 and SK is expected.
+The candidate detector position in the B2 floor is shown in Fig. \ref{fig:location}.
+The expected neutrino energy spectrum at the candidate position is shown in Fig. \ref{fig:b2flux}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/location2.pdf}
+\end{center}
+\caption{
+Candidate detector position in the B2 floor of the near detector hall.
+}
+\label{fig:location}
+\end{figure}
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/b2flux2.pdf}
+\end{center}
+\caption{
+Neutrino energy spectrum at the candidate detector position(red).
+The spectrum at the ND280 site (black) is also shown.
+}
+\label{fig:b2flux}
+\end{figure}
+
+
+\section{Goals of the test experiment}
+\subsection{Basic performance of the detector}
+We will test the following basic performance of the detector using the neutrino beam data,
+% and cosmic-ray data,
+and confirm the capability of measuring neutrino cross sections on water and hydrocarbon with high precision.
+\begin{itemize}
+% \item Stability of MPPC gain
+% \item Light yield and hit efficiency of each channel for minimal ionizing particles (MIPs)
+% \item Performance of the readout system (pedestal width, trigger threshold, timing resolution)
+\item Capability of identifying directions of motion of charged particles from the hit-time difference between the central detector and the MRDs
+% in the actual beam operation environment
+% for neutrino interactions in the central detector and charged-particle backgrounds
+%which originate from neutrino interactions in materials outside the central detector like the walls of the detector hall
+% and the $\mu$ range detectors
+\item Track reconstruction efficiency of 99\% for an isolated track longer than 10cm% for neutrino interactions in the central detector
+\item Particle identification capability, especially for protons and pions or muons, with dE/dx information
+\end{itemize}
+Once the performance is confirmed,
+we will measure the water to hydrocarbon charged current cross section ratio.
+
+
+\subsection{Water to hydrocarbon charged current cross section ratio measurement}
+% \section{Expected performance}
+% \subsection{Expected detector performance}
+% The performance of the detector is evaluated using the MC simulation using the Geant4 framework.
+We have studied the water to hydrocarbon charged current cross section ratio measurement by using the MC simulation in the Geant4 framework.
+The simulated event display is shown in Fig. \ref{fig:event_display}.
+% One of four $\mu$ range detectors in the side region is shown in the Fig. \ref{fig:event_display}.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/event_display3_2.pdf}
+\end{center}
+ \caption{
+MC event display of a charged current neutrino event in the central detector.
+}
+\label{fig:event_display}
+\end{figure}
+
+
+A neutrino charged current interaction in the central detector is identified by a track from the fiducial volume of the central detector
+to the MRD located around the central detector, where the MRD is used to identify a long muon track.
+First, hits are clustered by timing.
+Then, tracks are reconstructed using hit information.
+Next, tracks joined between the central detector and the MRD are searched to select long muon tracks
+which are stopped inside the MRD.
+After that, charged particles which originate from neutrino interactions in the material surrounding the central detector are rejected with VETO layers,
+and the determination of the direction of motion of charged particles from hit-time difference between the central detector and the MRD.
+Finally, the reconstructed event vertex is required to be inside the fiducial volume (FV) of the central detector.
+The FV of the central detector is defined as a volume within $\pm 45$cm from the detector center in the x and y directions,
+and $\pm 95$cm from the detector center along the beam direction.
+% The event selection efficiency of CC interactions after all the cuts as a function of true muon momentum (angle) is shown 
+% in Fig. \ref{fig:muon_p_eff} (Fig. \ref{fig:muon_angle_eff}).
+% The efficiencies are defined as the number of selected CC events divided by the number of CC interactions in the FV of the central detector.
+% The detector has high efficiency over large regions of  muon momentum and angle.
+% % Drops in the selection efficiency  in low muon momentum region and high muon angle region are caused by 
+% % events which have $\mu$ tracks stopped inside the central detector and upstream VETO layers,
+% % and we will develop special selection criteria to select those events as  
+
+% \begin{figure}[tbh]
+% \begin{center}
+% \includegraphics[width=0.6\linewidth]{fig/muon_p_eff2.pdf}
+% \end{center}
+% \caption{
+% Event selection efficiency of CC interactions as a function of true muon momentum.
+% }
+% \label{fig:muon_p_eff}
+% \end{figure}
+
+% \begin{figure}[tbh]
+% \begin{center}
+% \includegraphics[width=0.6\linewidth]{fig/muon_angle_eff2.pdf}
+% \end{center}
+% \caption{
+% Event selection efficiency of CC interactions as a function of true muon angle.
+% }
+% \label{fig:muon_angle_eff}
+% \end{figure}
+
+
+Background events which originate from neutrino interactions in the material surrounding the central detector are evaluated by using MC simulation,
+and the dominant background source is found to be neutral particles, like neutrons and gammas, from neutrino interactions in the walls of the experimental hall.
+The distribution of the number of penetrating iron layers in the MRD in the downstream (side) region,
+for the $\nu_{\mu}$ charged current event candidates, is shown in Fig. \ref{fig:num_iron_layer_ds_muon} 
+(Fig. \ref{fig:num_iron_layer_side_muon}).
+% for the neutrino interactions inside and outside the central detector are shown in Fig. \ref{fig:num_iron_layer_ds_muon} 
+% (Fig. \ref{fig:num_iron_layer_side_muon}).
+Background originating from neutrino interactions in the material surrounding the central detector
+% from outside the central detector 
+can be rejected using the number of penetrating layers in the MRDs.
+For instance, if events with four (two) or more penetrating iron layers in the MRD in the downstream (side) region are selected,
+the background contamination fraction can be reduced to a 5\% level.
+
+
+% \subsection{Expected signal}
+% We request $1 \times 10^{21}$ POT of data taking in $\nu$-enhanced beam operation
+% (not in anti-$\nu$-enhanced beam operation) for the test experiment.
+% The total water and hydrocarbon masses serving as neutrino targets are $\sim$1 ton each.
+% Therefore, 
+% In $1 \times 10^{21}$ POT of data taking in $\nu$ beam operation,
+In $1 \times 10^{21}$ POT of $\nu$ beam data,
+% the expected numbers of charged current candidate events in the water and hydrocarbon targets after the event selection are
+the expected number of the $\nu_{\mu}$ charged current event candidates which originate from neutrino interactions
+in water and hydrocarbon target inside the central detector,
+after applying the selection on the number of penetrating iron layers in the MRDs,
+are 21000 each.
+%  during the test experiment.
+So, statistical errors will be less than 1\% for this measurement.
+% よって、 イベント選択後も、統計誤差を1\%以下に抑えることができる。
+% \subsection{Expected background}
+Furthermore, a breakdown of neutrino interaction type of the event sample
+% the $\nu_{\mu}$ charged current candidate events originating from neutrino interactions in the material inside the central detector
+% the selected events 
+is shown in Table. \ref{tab:int_type}, and charged current interactions are selected with 92\% purity.
+% in the event sample.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/num_iron_layer_ds_muon2.pdf}
+\end{center}
+\caption{
+Number of penetrating iron layers in the MRD in the downstream region
+for the $\nu_{\mu}$ charged current event candidates which originate from
+neutrino interactions in the material inside (red) and surrounding (purple) the central detector.
+}
+\label{fig:num_iron_layer_ds_muon}
+\end{figure}
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{fig/num_iron_layer_side_muon2.pdf}
+\end{center}
+\caption{
+Number of penetrating iron layers in the MRD in the side region
+for the $\nu_{\mu}$ charged current event candidates which originate from
+neutrino interactions in the material inside (red) and surrounding (purple) the central detector.
+}
+\label{fig:num_iron_layer_side_muon}
+\end{figure}
+
+% \begin{figure}[tbh]
+% \begin{center}
+% \includegraphics[width=0.6\linewidth]{fig/int_type.pdf}
+% \end{center}
+% \caption{
+% Breakdown of neutrino interaction type for the $\nu_{\mu}$ charged current event candidates 
+% which originate from neutrino interactions in the material inside the central detector,
+% after applying the selection on the number of penetrating iron layers
+% in the MRDs.
+% }
+% \label{fig:int_type}
+% \end{figure}
+
+\begin{table}[htdp]
+\caption{Breakdown of neutrino interaction type for the $\nu_{\mu}$ charged current event candidates 
+which originate from neutrino interactions in water (or hydrocarbon) target inside the central detector,
+after applying the selection on the number of penetrating iron layers, in $1 \times 10^{21}$ POT of $\nu$ beam data}
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+\hline
+interaction type & expected number of events & fraction (\%)\\
+ & in $1 \times 10^{21}$ POT data & \\
+\hline
+charged current quasi-elastic scattering & 10000 &47.6 \\
+charged current single pion production & 4690 & 22.3 \\
+charged current deep inelastic scattering & 4140 & 19.7 \\
+charged current coherent pion production & 490 & 2.3 \\
+\hline
+neutral current single pion production & 340 & 1.6 \\
+neutral current deep inelastic scattering & 1340 & 6.4 \\
+\hline
+total & 21000 & 100 \\
+\hline
+\end{tabular}
+\label{tab:int_type}
+\end{center}
+\label{default}
+\end{table}
+
+
+
+The flux-averaged $\nu_{\mu}$ CC inclusive cross section is calculated from the number of selected events
+using the background subtraction and efficiency correction
+\begin{equation}
+\sigma_{CC} = \frac{N_{sel}-N_{BG}}{\phi T \epsilon},
+\end{equation}
+where $N_{sel}$ is the number of selected events from real data,
+$N_{BG}$ is the number of selected background events predicted by MC simulation,
+$\phi$ is the integrated $\nu_{\mu}$ flux, $T$ is the number of target nucleons,
+and $\epsilon$ is the detection efficiency for CC events predicted by MC simulation.
+The $\nu_{\mu}$ CC inclusive cross sections on water and hydrocarbon are measured from the number of selected events
+in the water and hydrocarbon regions in the central detector.
+% The $\nu_{\mu}$ CC inclusive cross section ration on water to hydrocarbon is measured 
+% using the two results.
+Finally, we will cancel the dominant systematic error, the neutrino flux error, by comparing the cross-section results from two neutrino targets, water and hydrocarbon, having almost identical neutrino fluxes, and measure the water to hydrocarbon charged current cross section ratio with 3\% precision, which is achieved in the INGRID measurement, as discussed in Sec. \ref{sec1}.
+% 3\% precision.
+
+
+\section{Schedule}
+In 2014,
+\begin{itemize}
+\item May \& October: performance test of detector components using positron beam at Tohoku University
+\item November: completion of testing of the detector components
+\item December: completion of the detector design
+\end{itemize}
+In 2015,
+\begin{itemize}
+\item January - May: procurement and delivery of the detector components
+\item June - September: detector construction at J-PARC
+\item October: detector installation inyo the near detector hall
+\item November: commissioning
+\item December : start data taking
+\end{itemize}
+
+
+\section{Requests}
+\subsection{Beam condition and beam time}
+The test experiment can run parasitically with T2K, therefore we request no dedicated beam time nor beam condition.
+
+
+We request $1 \times 10^{21}$ POT of $\nu$ (not anti-$\nu$) beam data for the test experiment.
+% Assuming 250kW beam operation, it corresponds to $\sim$ 100 days of data taking.
+In order to achieve the goals discussed in Sec. 3, 
+we would like to use the B2 floor of the near detector hall of the J-PARC neutrino beam-line
+as a test facility of the neutrino beam.
+
+% We will develop a 3D grid-like neutrino detector
+% and test basic performance of the detector to measure neutrino cross sections on water with high precision using the neutrino beam and cosmic-ray data.
+% Once the performance is proved as expected,
+% we will measure a charged current cross section ratio on water to hydrocarbon with 3\% precision using the detector.
+% The purpose of the cross section measurement is to reduce uncertainty on neutrino cross section for T2K oscillation analyses.
+
+% For achieving the above goals of the experiment, 
+% we would like to use the B2 floor of the near detector hall of J-PARC neutrino beam-line
+% as a test facility of the neutrino beam.
+
+% Once its performance is proved, then another proposal to continue to use this detector as a part of near detector
+% T2K will be submitted to appropriate bodies, i.e. IPNS-PAC and T2K.
+% In that case, we need at least for
+
+
+\subsection{Request of equipment}
+We request the followings from April 2015 until a long beam shutdown period after the end of the test experiment.
+\begin{itemize}
+\item Site for the detectors and the readout system (4m $\times$ 8m) in the B2 floor of the near detector hall (Fig. \ref{fig:location})
+\item Electricity ($\sim$10kW) for the electronics and water circulation system
+\item Beam timing signal and spill information
+\item Network connection
+\end{itemize}
+The infrastructure for all these is already existing.
+Equipment such as the detector itself will be covered by external funds.
+
+
+\begin{thebibliography}{999}
+\bibliographystyle{jplain}
+
+\bibitem{t2k_app}
+K.~Abe {\it et al.}, Phys. Rev. Lett. {\bf 112}, 061802 (2014).
+
+\bibitem{ingrid_ccinc}
+K.~Suzuki {\it et al.}, "Status of the neutrino cross section measurement in the T2K experiment", 
+The XLIX Rencontres de Moriond QCD and High Energy Interactions (2014).
+
+\bibitem{neut}
+Y~Hayato {\it et al.}, Acta Phys. Polon. B {\bf 40} 2477 (2009).
+
+\bibitem{genie}
+C.~Andreopoulos{\it et al.}, Nucl. Instrum. Meth. A {\bf 614} 87 (2010).
+
+\end{thebibliography}
+
+
+\end{document}

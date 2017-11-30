@@ -4,8 +4,10 @@
 %\geometry{landscape}                		% Activate for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+% TeX will automatically convert eps --> pdf in pdflatex
+\usepackage{subcaption}
 \usepackage{amssymb}
+\usepackage{color}
 
 %SetFonts
 
@@ -22,10 +24,18 @@
 %\subsection{}
 
 \input{introduction.tex}
+\input{setup}
+\input{setup_wagasci}
+\input{setup_babymind}
+\input{setup_smrd}
 \input{physics_goals.tex}
 \input{t59_status.tex}
+\section{Detector performance}
+\input{perform_wagasci}
+\input{perform_babymind}
+\input{perform_smrd}
 \input{mc_study.tex}
-\input{organization.tex}
+%\input{organization.tex}
 \input{schedule.tex}
 \input{requests.tex}
 \input{conclusion.tex}
