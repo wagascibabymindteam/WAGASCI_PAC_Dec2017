@@ -1,1 +1,67 @@
 \section{MC studies}
+
+\subsection{Detector simulation}
+Expected number of neutrino events in the WAGASCI detector is evaluated with Monte Carlo simulations. 
+Neutrino beam flux at the detector location is simulated by T2K neutrino flux generator, JNUBEAM, neutrino interactions with target materials are simulated by a neutrino interaction simulator, NEUT, detector responses are simulated using GEANT4-based simulation.
+The neutrino flux at the detector location, 1.5 degrees away from the J-PARC neutrino beam axis, is shown in Figure \ref{fig:b2flux}, and its mean neutrino energy is around 0.68 GeV.
+
+
+\subsubsection{Detector geometry}
+The detector geometry in the GEANT4-based simulation is slightly different from the actual detector as shown in Fig. \ref{fig:wagasci_mc_geometry}.
+The active neutrino target region consists of four WAGASCI modules, and each WAGASCI detector has the dimension with 100 cm $\times$ 100 cm in the x and y directions and 50 cm along the beam direction.
+An event display of a MC event in the WAGASCI detectors is shown in Figure \ref{fig:wagasci_event_display}.
+Two Side-MRD modules is installed at both sides of the WAGASCI modules, and each Side-MRD module consists of ten iron plates whose dimension is 3 cm (thickness) $\times$ 180 cm (height) $\times$ 320 cm (width). 
+The distance between the Side-MRD modules and WAGASCI modules is 60 cm.
+The downstream-MRD equivalent to the Baby-MIND is installed at the downstream of the WAGASCI modules.
+The downstream-MRD consists of ten iron plates whose dimension is  3 cm (thickness) $\times$ 180 cm (height) $\times$ 320 cm (width) and another ten iron plates whose dimension is 6 cm (thickness) $\times$ 180 cm (height) $\times$ 320 cm (width).
+The distance between the downstream-MRD modules and WAGASCI modules is 60 cm.
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/wagasci_mc_geometry.pdf}
+% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+Geometry of the detectors in the Monte Carlo simulation.}
+\label{fig:wagasci_mc_geometry}
+\end{figure}
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/wagasci_event_display.pdf}
+% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+An event display of MC event in WAGASCI detectors. Green lines are scintillators and red circles are the hit channels.}
+\label{fig:wagasci_mc_geometry}
+\end{figure}
+
+In order to estimate backgrounds from neutrino interactions in the wall and floor of the experimental hall, the geometry of the experimental hall is implemented in the GEANT4-based detector simulation.
+
+
+\subsubsection{Response of detector components}
+The energy deposit inside the scintillator is converted into the number of photons. 
+The effects of collection and attenuation of the light in the scintillator and the WLS fiber are simulated, and the MPPC response is also taken into account. 
+The light yield is smeared according to statistical fluctuations and electrical noise.
+
+
+\subsection{Track reconstruction}
+
+
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/tmp.pdf}
+% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+J-PARC T59 detector configuration with Baby-MIND and two Side-MRD modules from Mar. to May 2018.
+(Need to prepare the figure.)}
+\label{fig:det_config_mar_may2018}
+\end{figure}
+
+add event display here.
+
+
+
+
