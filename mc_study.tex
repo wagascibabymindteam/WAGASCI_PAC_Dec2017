@@ -46,21 +46,64 @@ The light yield is smeared according to statistical fluctuations and electrical 
 
 
 \subsection{Track reconstruction}
+To select neutrino interaction from the hit patterns, a track reconstruction algorithm is developed.
+The flow of the track reconstruction is as follows.
+\begin{enumerate}
+\item Two-dimensional track reconstruction in each sub-detectors
+\item Track matching among the sub-detectors
+\item Three -dimensional track reconstruction
+\end{enumerate}
 
+Add explanation about two-dim reco, track matching and three-dim reco here.
+
+
+\subsection{Event selection}
+
+\subsubsection{Vertexing}
+
+
+\subsubsection{Short track search}
+
+
+\subsubsection{Fiducial volume cut}
+The events with the track which starts in 5 cm from the wall of the WAGASCI module are rejected to remove the background from the outside as shown in Fig. \ref{fig:fv_cut}.
+
+\begin{figure}[tbh]
+  \begin{center}
+   \begin{subfigure}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{fig/fv_cut_y.pdf}
+    \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{fig/fv_cut_z.pdf}
+    \end{subfigure}    
+    \end{center}
+  \caption{Event selection with the vertex of the track.
+Blue hist. are events from the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the downstream-MRD.
+}
+\label{fig:fv_cut}
+\end{figure}
+
+
+\subsubsection{Penetrated iron plates cut}
 
 
 \begin{figure}[tbh]
-\begin{center}
-\includegraphics[width=0.8\linewidth]{fig/tmp.pdf}
-% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
-\end{center}
-\caption{
-J-PARC T59 detector configuration with Baby-MIND and two Side-MRD modules from Mar. to May 2018.
-(Need to prepare the figure.)}
-\label{fig:det_config_mar_may2018}
+  \begin{center}
+   \begin{subfigure}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{fig/penetrated_iron_plates_cut_sidemrd.pdf}
+    \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{fig/penetrated_iron_plates_cut_babymind.pdf}
+    \end{subfigure}    
+    \end{center}
+  \caption{
+Event selection with the number of the penetrated iron plates in the Side-MRD modules (left) and the Baby-MIIND (right).
+Blue and red hist. are events from the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
+}
+\label{fig:penetrated_iron_plates_cut}
 \end{figure}
 
-add event display here.
+
 
 
 
