@@ -59,7 +59,6 @@ Add explanation about two-dim reco, track matching and three-dim reco here.
 
 \subsection{Event selection}
 
-
 The events with the track which starts in 5 cm from the wall of the WAGASCI module are rejected to remove the background from the outside as shown in Fig. \ref{fig:fv_cut}.
 
 \begin{figure}[tbh]
@@ -77,6 +76,9 @@ Blue hist. are events from the WAGASCI modules, green hist. are events from the 
 \label{fig:fv_cut}
 \end{figure}
 
+
+To reject backgrounds from NC and neutral particles, the longest tracks are required to penetrate more than one (five) iron plates in Side-MRD modules (Baby-MIND) as shown in Figure \ref{fig:penetrated_iron_plates_cut}.
+In order to measure muon momentum, the longest tracks are required to stop in MRDs (Side-MRD modules and Baby-MIND) or penetrate all iron plates.
 
 \begin{figure}[tbh]
   \begin{center}
@@ -118,6 +120,7 @@ The main background is the neutrino interaction in the scintillators inside the 
 
 
 Figure \ref{fig:angle_allcut_neutrino} shows the reconstructed angles of the longest tracks in the selected events.
+Figure \ref{fig:angle_resolution_neutrino} shows differences between true angles and the reconstructed angles of the longest tracks in the selected events, and the angle resolution is $\sim$3 degrees.
 
 \begin{figure}[tbh]
 \begin{center}
@@ -129,5 +132,35 @@ The reconstructed angles of the longest tracks in the selected events.
 Blue and red hist. are events from water and scintillators in the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
 }
 \label{fig:angle_allcut_neutrino}
+\end{figure}
+
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{fig/angle_resolution_neutrino.pdf}
+% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
+\end{center}
+\caption{
+Differences between true angles and the reconstructed angles of the longest tracks in the selected events.
+}
+\label{fig:angle_resolution_neutrino}
+\end{figure}
+
+
+Figure \ref{fig:endpoint_longest_track_neutrino} shows the iron plane numbers corresponding to the end points of the longest tracks in the selected events.
+
+\begin{figure}[tbh]
+  \begin{center}
+   \begin{subfigure}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{fig/endpoint_sidemrd_longest_track_neutrino.pdf}
+    \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{fig/endpoint_babymind_longest_track_neutrino.pdf}
+    \end{subfigure}    
+    \end{center}
+  \caption{
+Iron plane numbers in Side-MRD (left) and Baby-MIND (right) corresponding to the end points of the longest tracks in the selected events.
+Blue and red hist. are events from water and scintillators in the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
+}
+\label{fig:endpoint_longest_track_neutrino}
 \end{figure}
 
