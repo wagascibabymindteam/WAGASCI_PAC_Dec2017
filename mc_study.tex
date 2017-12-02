@@ -113,6 +113,7 @@ The main background is the neutrino interaction in the scintillators inside the 
      Penetrated iron & $3.02 \times 10^{4}$  & $9.12 \times10^{2}$ & $7.67 \times10^{3}$ & $2.04 \times 10^{3}$ & $4.00 \times 10^{4}$ \\
      Stop in MRDs & $2.41 \times 10^{4}$  & $8.65 \times10^{2}$ & $6.19 \times10^{3}$ & $1.64 \times 10^{3}$ & $3.19 \times 10^{4}$ \\ \hline
      after all cuts & 75.5 \% & 2.71 \% & 19.4 \% & 5.14 \% & 100 \% \\
+     \hline
     \end{tabular}
     \label{tab:expected_num_events_neutrino_beam}
   \end{center}
@@ -162,5 +163,43 @@ Iron plane numbers in Side-MRD (left) and Baby-MIND (right) corresponding to the
 Blue and red hist. are events from water and scintillators in the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
 }
 \label{fig:endpoint_longest_track_neutrino}
+\end{figure}
+
+
+Table \ref{tab:longest_track_particle} shows particles which produce the longest tracks in the selected events, and the fraction of muons is 85.6\%.
+
+\begin{table}[htb]
+  \begin{center}
+    \caption{Particles which produce the longest tracks in the selected events.}
+    \begin{tabular}{cc} \hline
+      particles & fraction \\ \hline
+      $\mu$ & 85.6\% \\
+      $\pi^{+},\ \pi^{-}$ & 4.8\% \\
+      p & 4.3\% \\
+      e$^{+}$, e$^{-}$ & 4.5\% \\
+      \hline
+    \end{tabular}
+    \label{tab:expected_num_events_neutrino_beam}
+  \end{center}
+\end{table}
+
+
+Figure \ref{fig:} shows detection efficiencies of muon tracks in the selected events as a function of muon's true angle and true momentum.
+The efficiency in the large angle region is low because Side-MRD modules only cover sides of the WAGASCI modules.
+The efficiency in the low momentum region is also low because more than two hits  are required to reconstruct the track in the WAGASCI detector.
+
+\begin{figure}[tbh]
+  \begin{center}
+   \begin{subfigure}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{fig/eff_muon_angle_neutrino.pdf}
+    \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{fig/eff_muon_momentum_neutrino.pdf}
+    \end{subfigure}    
+    \end{center}
+  \caption{
+Detection efficiencies of muon tracks in the selected events as a function of muon's true angle (left) and true momentum (right).
+}
+\label{fig:eff_muon_angle_momentum_neutrino}
 \end{figure}
 
