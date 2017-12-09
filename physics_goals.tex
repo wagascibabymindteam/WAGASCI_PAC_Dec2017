@@ -1,27 +1,25 @@
 \section{Physics goals}
-We will measure the differential cross section for the charged current interaction on $\mathrm{H_2O}$ and/or CH.
-The water-scntillator mass ratio of the Wagasci module is as high as 5:1 and the high purity measurement
+We will measure the differential cross section for the charged current interaction on $\mathrm{H_2O}$ and Hydrocarbon(CH)).
+The water-scintillator mass ratio of the Wagasci module is as high as 5:1 and the high purity measurement
 of the cross section on $\mathrm{H_2O}$ is possible.
-\textcolor{red}{One experimental option is to replace one of the two Wagasci module with the T2K proton module
-  which is fully made with plastic scintillators. It will allow the precise comparison
-  of cross section between $\mathrm{H_2O}$ and CH and also comparison of cross sections with ND280.}
-  \textcolor{red}{Another option is to remove water from one of the two Wagasci module. 
-The water-out WAGASCI module will make it possible to measure wider- angle scatterings for CH target and will provide a low density medium for the detection of low momentum protons.
-The water-out WAGASCI data also can be used to subtract the background from interaction with scintillators in the water target measurement .
-}
-Our setup would allow the measuemrents of inclusive and also exclusive channles such as
+One experimental option is to remove water from one of the two Wagasci modules. 
+The water-out WAGASCI module will allow to measure pure-CH target interactions with very low momentum-threshold for protons.
+It will also benefit to subtract the background from interaction with scintillator in the water target measurement.
+Another option is to add the T2K proton module which is fully made of plastic scintillators.
+It will allow the high statistics comparison of cross section between $\mathrm{H_2O}$ and CH and also comparison
+with the ND280 measurement. The actual configuration will be optimized with detailed MC simulation by 2018 Summer.
+
+Our setup allows the measurements of inclusive and also exclusive channels such as
 1-$\mu$, 1-$\mu 1p$, 1-$\mu 1\pi{\pm} np$ samples, former two of which are mainly caused by the quasi-elastic and
 2p2h interaction and the latter is mainly caused by resonant or coherent pion production and deep elastic scattering.
 In general, an accelerator produced neutrino beam spectrum is wide and the energy reconstruction
 somehow rely on the neutrino interaction model.
-Therefore, recent neutrino cross section measurement results including T2K are given as a flux-integrated cross section
-rather than cross sections as a function of the neutrino energy to avoid the model dependency.
+Therefore, recent neutrino cross section measurement results including those from T2K are given
+as a flux-integrated cross section rather than cross sections as a function of the neutrino energy to avoid the model dependency.
 We can provide the flux-averaged cross section.
 In addition, by combining our measurements with those at ND280, model-independent extraction of the cross section
 for narrow energy region becomes possible.
-This method was demonstrated in \ref{ingrid_energy_dependent} and also proposed by P** (NUPRISM).
-\textcolor{red}{add Yasutome plot here or later.}
-
+This method was demonstrated in \cite{Abe:2015biq} and also proposed by P** (NUPRISM).
 
 \subsection{Expected number of events}
 Expected number of neutrino events after the event selections is evaluated with Monte Carlo simulations as we will discuss in Section \ref{sec:mc_study}.
@@ -29,8 +27,32 @@ $2.41 \times 10^{4}$ CC events are expected in two WAGASCI modules after the sel
 In case we choose the option with one WAGASCI module and the T2K proton module,  $1.2 \times 10^{4}$ CC events are expected in the WAGASCI module and $\sim 1\times 10^{4}$ CC events are expected in the T2K proton module.
 In case we choose the option with one water-in WAGASCI module and one water-out WAGASCI module,  $1.2 \times 10^{4}$ CC events are expected in the water-in module and $0.24 \times 10^{4}$ CC events are expected in the water-out module.
 
+\subsection{Pseudo-monochromatic beam by using different off-axis fluxes}
+The off-axis method gives narrower neutrino spectrum, and the peak energy is lower for larger off-axis angle.
+There still remains high energy tail mainly due to neutrinos from Kaon decay.
+The off-axis angle of the Wagasci location is 1.5 degree and different from the ND280 2.5 degree.
+Top two plots of Fig.~\ref{fig:fluxsubtfhc} show the energy spectra of fluxes and neutrino interaction events
+at these two different location.
+The high energy tail of ND280 flux can be somehow subtraction by using the Wagasci measurement.
+The low energy part of the Wagasci flux can be also subtracted by using the ND280 measurement.
+Bottom two plots of Fig.~\ref{fig:fluxsubtfhc} demonstrate this method.
+We can effectively get two fluxes, from 0.2 GeV to 0.9 GeV and 0.6 GeV and 2 GeV
+and measure flux-integrated cross section for these two fluxes.
 
-\subsection{Nuclear effects}
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=\textwidth]{fig/fluxsubtractFHC.pdf}
+\end{center}
+\caption{Energy spectra obtained by using different off-axis angle fluxes.
+  Top two plots show the fluxes(left) and spectra of interaction events (right) for ND280 (off-axis 2.5 degree) and Wagasci (off-axis 1.5 degree). Bottom two plots show the fluxes (left) and spectra of interaction events (right) obtained by
+  subtraction of fluxes at ND280 and Wagasci.
+  The error bar is for the statistical error and those in the bottom right plot is obtained assuming the statistical error
+  for ND280 measurement is much smaller than that of Wagasci experiment.
+}
+\label{fig:fluxsubtfhc}
+\end{figure}
+
+\subsection{Subjects Wagasci can contribute}
 In T2K experiment, neutrinos interact with bound nucleons in relatively heavy nuclei (Carbon and Oxygen), so the cross-section is largely affected by nuclear effects.
 The nuclear effects are categorized as nucleons' momentum distribution in nucleus, interactions with  correlated pairs of nucleons in nucleus (two particles-two holes, 2p2h), collective nuclear effects calculated with Random Phase Approximation (RPA) and final state interactions (FSI) of secondary particles in the nuclei after the initial neutrino interactions.
 
