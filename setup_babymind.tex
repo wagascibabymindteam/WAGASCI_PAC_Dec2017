@@ -3,7 +3,8 @@ The Baby MIND is the downstream Muon Range Detector.
 It also works as a magnet and provides the charge identification capability
 as well as magnetic momentum measurement for high energy muons.
 
-The Baby MIND collaboration \footnote{Contact person: E. Noah, Spokesperson: A. Blondel, Deputy spokesperson: Y. Kudenko} submitted a proposal to the SPSC at CERN, SPSC-P-353 \cite{spsc:babymind}, written to outline project plans with a focus on construction and testing activities at CERN. The project was approved by the CERN research board as Neutrino Platform project NP05.
+The Baby MIND collaboration \footnote{Contact person: E. Noah, Spokesperson: A. Blondel, Deputy spokesperson: Y. Kudenko} submitted a proposal to the SPSC at CERN, SPSC-P-353.
+The project was approved by the CERN research board as Neutrino Platform project NP05 and constructed.
 The detector consists of 33 magnet modules, each 3500 mm $\times$ 2000 mm$ \times$ 50 mm (30 mm steel) with a mass of approximately 2 tonnes. Of these magnet modules, 18 are instrumented with plastic scintillator modules. 
 
 %The main Baby MIND systems are the magnet, scintillator and electronics modules \cite{Noah:EPS2017}.
@@ -14,13 +15,15 @@ The detector consists of 33 magnet modules, each 3500 mm $\times$ 2000 mm$ \time
 
 \subsubsection{Magnet modules}
 
-The Baby MIND is built from sheets of iron interleaved with scintillator detector modules but unlike traditional layouts for magnetized iron neutrino detectors (e.g. MINOS) which tend to be monolithic blocks with a unique pitch between consecutive steel segments and large conductor coils threaded around the whole magnet volume, the Baby MIND iron segments are all individually magnetized, allowing for far greater flexibility in the setting of the pitch between segments, and in the allowable geometries that these detectors can take. 
+The Baby MIND is built from sheets of iron interleaved with scintillator detector modules but unlike traditional layouts for magnetized iron neutrino detectors (e.g. MINOS) which tend to be monolithic blocks with a unique pitch between consecutive steel segments and large conductor coils threaded around the whole magnet volume, the Baby MIND iron segments are all individually magnetized as shown inf Fig.~\ref{fig:BM_winding}, allowing for far greater flexibility in the setting of the pitch between segments, and in the allowable geometries that these detectors can take. 
 
-The key design outcome is a highly optimized magnetic field map. A double-slit configuration for coil winding was adopted to increase the area over which the magnetic flux lines are homogeneous in $B_x$ across the central tracking region. Simulations show the magnet field map to be very uniform over this central tracking region covering an area of $2800\times2000$ mm$^2$, Figure \ref{magnet-cross-sections}. The $B_x$ component dominates in this region, with negligible $B_y$ and $B_z$. This was confirmed by measuring the field with 9 pick-up coils wound around the first ARMCO module. Subsequent modules were equipped with one pick-up coil. Test results on the 33 modules show all to achieve the required field of 1.5 T for a current of 140 A, with a total power consumption of 11.5 kW. The polarity of the field map shown in Figure \ref{magnet-cross-sections} (middle) can be reversed by changing the power supply configuration.
-\insertthreegraphs{0.32}{magnet_assembly_zone.png}{0.32}{b-field-1500a-280cm-coil.png}{0.32}{magnetic_field_measurements_per_batch.png}{Left) Magnet assembly zone at CERN. Middle) Magnetic field map with a coil along 280 cm of the length of the plate. Right) Measured B field for 33 modules.}{magnet-cross-sections}
+The key design outcome is a highly optimized magnetic field map. A double-slit configuration for coil winding was adopted to increase the area over which the magnetic flux lines are homogeneous in $B_x$ across the central tracking region. Simulations show the magnet field map to be very uniform over this central tracking region covering an area of $2800\times2000$ mm$^2$, Fig.~\ref{magnet-cross-sections}. The $B_x$ component dominates in this region, with negligible $B_y$ and $B_z$. This was confirmed by measuring the field with 9 pick-up coils wound around the first module. Subsequent modules were equipped with one pick-up coil. Test results on the 33 modules show all to achieve the required field of 1.5 T for a current of 140 A, with a total power consumption of 11.5 kW. The polarity of the field map shown in Figure \ref{magnet-cross-sections} (middle) can be reversed by changing the power supply configuration.
+\insertgraph{0.5}{magnet_assembly_zone.png}{Magnet assembly zone at CERN. }{fig:BM_winding}
+\inserttwographs{0.5}{b-field-1500a-280cm-coil.png}{0.4}{magnetic_field_measurements_per_batch.png}{Left) Magnetic field map with a coil along 280 cm of the length of the plate. Right) Measured B field for 33 modules.}{magnet-cross-sections}
 
 \subsubsection{Scintillator modules}
-Each of the 18 scintillator modules is constructed from 2 planes of horizontal counters (95 counters in total) and 2 planes of vertical counters (16 counters in total) \cite{Antonova:2017tuf}, arranged with an overlap between planes to achieve close to 100\% hit efficiency for minimum ionizing muons. The arrangement of planes within a module is vertical-horizontal-horizontal-vertical, with construction of each module carried out in two separate phases, one front half-module constructed with two planes vertical/horizontal, and one back half-module constructed with two further planes horizontal/vertical. The scintillator bars are held in place using structural ladders that align and maintain the counters, Figure \ref{proto-module-ladders}. No glue is used in the process, so counters can be replaced. Aluminum sheets front and back provide light tightness.
+Each of the 18 scintillator modules is constructed from 2 planes of horizontal counters (95 counters in total) and 2 planes of vertical counters (16 counters in total) \cite{Antonova:2017tuf}, arranged with an overlap between planes to achieve close to 100\% hit efficiency for minimum ionizing muons. The arrangement of planes within a module is vertical-horizontal-horizontal-vertical.
+The scintillator bars are held in place using structural ladders that align and maintain the counters, Figure \ref{proto-module-ladders}. No glue is used in the process, so counters can be replaced. Aluminum sheets front and back provide light tightness.
 
 \insertthreegraphs{0.32}{top_front_module.png}{0.32}{bottom_front_module.png}{0.32}{rear-half-module.png} {Scintillator modules assembly. Left) top of front half-module showing vertical counters, and the spacers-ladders that set the pitch between horizontal counters and hold them in place. Middle) rear half-module showing horizontal counters on their ladders. Right) Assembled rear half-module, the front half-module can be seen in the background.}{proto-module-ladders}
 
@@ -35,54 +38,15 @@ The Baby MIND electronic readout scheme includes several custom-designed boards 
 
 \inserttwographs{0.47}{readout_scheme_2.png}{0.45}{electronics_connectivity_detailed.png}{Left) Baby MIND electronics readout scheme. Right) SiPM-to-FEB connectivity.}{block_diagrams}
 
-The FEBv2 hosts 3 CITIROC chips that can each read in signals from 32 SiPMs \cite{Fleury:2014hfa}. Each signal input is processed by a high gain, and a separate low gain, signal path. Both paths comprise independent pre-amplification and "slow" shaping stages with tunable gain and shaping time constant, respectively. The outputs from the slow shapers can be sampled using one of two modes: a mode with an externally applied delay, and a peak detector mode. A faster shaper can be switched to either HG or LG paths, followed by discriminators with adjustable thresholds providing 32 individual trigger outputs and one OR32 trigger output. An Altera ARIA5 FPGA on the FEBv2 samples these trigger outputs at 400 MHz, recording rising and falling times for the individual triggers and assigning time stamps to these. Time-over-threshold from the difference between falling and rising times gives some measure of signal amplitude, used in addition to charge information and useful if there is more than one hit per bar within the deadtime due to the readout of the multiplexed charge output of $\sim9$ $\mu$s. The ARIA5 also manages the digitization of the sampled CITIROC multiplexed HG and LG outputs via a 12-bit 8-ch ADC. 
+The FEBv2 hosts 3 CITIROC chips that can each read in signals from 32 SiPMs \cite{Fleury:2014hfa}. Each signal input is processed by a high gain, and a separate low gain, signal path.
+The outputs from the slow shapers can be sampled using one of two modes: a mode with an externally applied delay, and a peak detector mode. A faster shaper can be switched to either HG or LG paths, followed by discriminators with adjustable thresholds providing 32 individual trigger outputs and one OR32 trigger output. An Altera ARIA5 FPGA on the FEBv2 samples these trigger outputs at 400 MHz, recording rising and falling times for the individual triggers and assigning time stamps to these. Time-over-threshold from the difference between falling and rising times gives some measure of signal amplitude, used in addition to charge information and useful if there is more than one hit per bar within the deadtime due to the readout of the multiplexed charge output of $\sim9$ $\mu$s. The ARIA5 also manages the digitization of the sampled CITIROC multiplexed HG and LG outputs via a 12-bit 8-ch ADC. 
 
 %The FEBv2 is designed to fit into a slot in a minicrate as shown in Figure \ref{minicrate}. The front face receives the SiPMs cable bundles, the rear end plugs into the backplane. Up to 6 FEBv2 can be housed in each minicrate. Eight minicrates are distributed either side of the Baby MIND.
 
-The internal 400 MHz clock on the FEBv2 can be synchronized to a common 100 MHz clock. The synchronization subsystem combines input signals from the beam line into a digital synchronization signal (SYNC) and produces a common detector clock (CLK) which can eventually be synchronised to an external experiment clock \cite{synchro}. Both SYNC and CLK signals are distributed to the FEBs. Tests show the FEB-to-FEB CLK(SYNC) delay difference to be 50 ps (70 ps). Signals from the beam line at WAGASCI include two separate timing signals, arriving 100 ms and 30 $\mu$s before the neutrino beam at the near detectors \cite{wagasci_elec}. The spill number is available as a 16-bit signal. 
+The internal 400 MHz clock on the FEBv2 can be synchronized to a common 100 MHz clock. The synchronization subsystem combines input signals from the beam line into a digital synchronization signal (SYNC) and produces a common detector clock (CLK) which can eventually be synchronised to an external experiment clock. Both SYNC and CLK signals are distributed to the FEBs. Tests show the FEB-to-FEB CLK(SYNC) delay difference to be 50 ps (70 ps). Signals from the beam line at WAGASCI include two separate timing signals, arriving 100 ms and 30 $\mu$s before the neutrino beam at the near detectors. The spill number is available as a 16-bit signal. 
 %\insertthreegraphs{0.31}{FEBv2_horizontal_low_res.jpg}{0.2}{FEB_v2_in_crate_low_res2.jpg}{0.145}{rear_minicrate.jpg}{Left) Second version of the electronics readout Front End Board (FEBv2), received at the University of Geneva in March 2017. Middle) FEBv2 in minicrate. Right) rear of minicrate with 6 FEBs connected through a Backplane PCB on the lower half of the minicrate.}{minicrate}
 
 %Several connection options are possible between the FEBv2 and a DAQ PC. The FEBv2 can be operated as a standalone device, connected directly to a DAQ PC via USB3. This is useful for laboratory measurements on the FEB itself, its maintenance and calibration, and qualification tests on other components such as MPPCs or cable bundles. It is also possible to daisy chain several FEBs via the backplane PCB in experiment data taking mode, with the first FEB in the chain connected directly to the DAQ PC via a USB3 link. In this mode the USB3 bandwidth is shared with the potential 6 FEBs in the chain thanks to a Time Division Multiplexing (TDM) protocol, each FEB having $1/6$th of the data throughput. For enhanced measurements or calibration a dedicated option of the chaining is also possible where 1 single FEB in the chain can use the full bandwidth of the single USB3 connection. The DAQ software is platform independent. The data protocol encodes information such as spill number, FEB ID, hit channel number, time and charge, as well as tags to match the TDM data stream to the correct minicrate slot ID.
 
-
-\begin{thebibliography}{99}
-
-\bibitem{spsc:babymind}
-M.~Antonova {\it et al.} CERN-SPSC-2015-031, SPSC-P-353.
-
-%By S. Parsa
-%\cite{Antonova:2017tuf}
-\bibitem{Antonova:2017tuf}
-  M.~Antonova {\it et al.} [Baby MIND Collaboration],
-  %``Baby MIND Experiment Construction Status,''
-  arXiv:1704.08917 [physics.ins-det].
-
-  %\cite{Kudenko:2001qj}
-\bibitem{Kudenko:2001qj}
-  Y.~G.~Kudenko, L.~S.~Littenberg, V.~A.~Mayatsky, O.~V.~Mineev and N.~V.~Ershov,
-  %``Extruded plastic counters with WLS fiber readout,''
-  Nucl.\ Instrum.\ Meth.\ A {\bf 469} (2001) 340.
-  doi:10.1016/S0168-9002(01)00780-X
-
-%\cite{Noah:2016ikh}
-\bibitem{Noah:2016ikh}
-  E.~Noah {\it et al.},
-  %``Readout scheme for the Baby-MIND detector,''
-  PoS PhotoDet {\bf 2015} (2016) 031.
-
-\bibitem{Fleury:2014hfa}
-  J.~Fleury, S.~Callier, C.~de La Taille, N.~Seguin, D.~Thienpont, F.~Dulucq, S.~Ahmad and G.~Martin,
-  %``Petiroc and Citiroc: front-end ASICs for SiPM read-out and ToF applications,''
-  JINST {\bf 9} (2014) C01049.
-  doi:10.1088/1748-0221/9/01/C01049
-
-\bibitem{synchro}
-G. Mitev, Y. Favre {\it et al.}, "Synchronization of the distributed readout frontend electronics of the Baby MIND detector", Proc. XXVI International Scientific Conference Electronics - ET2017, Sozopol, Bulgaria, 2017.
-
-\bibitem{wagasci_elec}
-N. Chikuma {\it et al.}, "Development of electronics and data acquisition system for the J-PARC T59 (WAGASCI) experiment", PoS EPS-HEP2017 (2017). 
-
-
-\end{thebibliography}
 
 
