@@ -1,18 +1,21 @@
 \section{MC studies}
 \label{sec:mc_study}
 \subsection{Simulation setup}
+The expected number of neutrino events in the water-in Wagasci detector
+is predicted by Monte Carlo simulations.
+Neutrino beam flux at the detector location is simulated by T2K neutrino flux generator, JNUBEAM. Neutrino interactions with target materials are simulated by a neutrino interaction simulator, NEUT. Detector responses are simulated using GEANT4-based simulation.
 
-Simulation study was conducted by using the T2K neutrino flux generator, JNUBEAM, neutrino interaction simulator, NEUT, and Geant4 for the detector responses.
 
 The detector geometry in the simulation so far is different from the actual setup as shown in Figure \ref{fig:wagasci_mc_geometry}.
 The active neutrino target region consists of four WAGASCI modules.
-The size of the WAGASCI module is same as the actual one: 100 cm $\times$ 100 cm in the x and y directions and 50 cm along the beam direction (z-direction).
+The size of the WAGASCI module is same as the actual one: 1000 mm $\times$ 1000 mm in the x and y directions and 500 mm along the beam direction (z-direction).
 %An event display of a MC event in the WAGASCI detectors is shown in Figure \ref{fig:wagasci_event_display}.
-Two Side-MRD modules is installed at both sides of the WAGASCI modules, and each Side-MRD module consists of ten iron plates whose dimension is 3 cm (thickness) $\times$ 200 cm (height) $\times$ 320 cm (width). 
-The distance between the Side-MRD modules and WAGASCI modules is 80 cm.
+Two Side-MRD modules are installed either side of the Wagasci modules.
+Each Side-MRD module consists of ten iron plates whose dimension is 30 mm (thickness) $\times$ 2000 mm (height) $\times$ 3200 mm (width). 
+The distance between the Side-MRD modules and WAGASCI modules is 800 mm.
 The downstream-MRD is equivalent to the Baby-MIND, but without the magnetic field.
-It consists of thirty iron plates whose dimension is  3 cm (thickness) $\times$ 200 cm (height) $\times$ 400 cm (width).
-The distance between the downstream-MRD modules and WAGASCI modules is 80 cm.
+It consists of thirty iron plates whose dimension is  30 mm (thickness) $\times$ 2000 mm (height) $\times$ 4000 mm (width).
+The distance between the downstream-MRD modules and WAGASCI modules is 800 mm.
 Update of the study with the actual geometry is now underway.
 
 \begin{figure}[tbhp]
@@ -49,7 +52,7 @@ Then, track matching among the sub-detectors and three-dimensional track reconst
 These analysis tools have been developed from the software tools by the T2K INGRID and in mature stage already.
 
 The events are selected as follows.
-The starting point of the track is required to be 5~cm away from the edge of the WAGASCI module. This is to remove the background from the outside.
+The starting point of the track is required to be 50~mm away from the edge of the WAGASCI module. This is to remove the background from the outside.
 % as shown in Fig. \ref{fig:fv_cut}.
 % \begin{figure}[tbh]
 % \begin{center}
