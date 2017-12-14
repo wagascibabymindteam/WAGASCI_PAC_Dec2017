@@ -1,15 +1,15 @@
-\subsection{Wagasci modules}
+\subsection{WAGASCI modules}
 \subsubsection{Detector}
-The WAGASCI modules are mainly composed of 1280 plastic scintillator bars and a surrounding stainless steel tank as shown in Fig. \ref{fig:3dgrid_wagascimod}.
-The total number of channels in one Wagasci module is 1280.
+The WAGASCI modules are mainly composed of 1280 plastic scintillator bars and a surrounding stainless steel tank as shown in Figure \ref{fig:3dgrid_wagascimod}.
+The total number of channels in one WAGASCI module is 1280.
 The stainless steel tank is constructed by welding stainless steel plates, is sized as 46$\times$125$\times$125 cm$^{3}$, and weighs 0.5 ton. 
 %The plastic scintillator bars form a three-dimensional grid structure with 5$\times$5$\times$2.5 cm$^{3}$ cells. 
 
 
-One Wagasci module consists of 16 scintillator tracking planes, where each plane is an array of 80 scintillator bars fixed with ABS frames.
-The 40 bars, called parallel scintillators, are placed perpendicularly to the beam, and the other 40 bars, called grid scintillators, are placed in parallel to the beam with grid structure in the tracking plane as shown in Fig. \ref{fig:3dgrid_wagascimod}.
-Thanks to the 3 D grid-like structure of the scintillator bars, 
-the Wagasci module has $4\pi$ angular acceptance for charged particles.
+One WAGASCI module consists of 16 scintillator tracking planes, where each plane is an array of 80 scintillator bars fixed with ABS frames.
+The 40 bars, called parallel scintillators, are placed perpendicularly to the beam, and the other 40 bars, called lattice scintillators, are placed in parallel to the beam with hollow cuboid lattice in the tracking plane as shown in Figure \ref{fig:3dgrid_wagascimod}.
+Thanks to the hollow cuboid lattice of the scintillator bars, 
+the WAGASCI module has $4\pi$ angular acceptance for charged particles.
 
 \begin{figure}[tbhp]
   \begin{center}
@@ -20,15 +20,15 @@ the Wagasci module has $4\pi$ angular acceptance for charged particles.
       \includegraphics[width=\linewidth]{fig/wagasci_mod.pdf}
     \end{subfigure}    
     \end{center}
-  \caption{Schematic views of 3D grid-like structure of plastic scintillator bars (left) and Wagasci module (right).}
+  \caption{Schematic views of hollow cuboid lattice of plastic scintillator bars (left) and WAGASCI module (right).}
 \label{fig:3dgrid_wagascimod}
 \end{figure}
 
 
-Thin plastic scintillator bars produced at Fermilab by extrusion method, mainly consists of polystyrene and are surrounded by thin reflector including TiO$^{2}$ (3 mm in thickness) are used for the Wagasci modules to reduce the mass ratio of scintillator bars to water,
+Thin plastic scintillator bars produced at Fermilab by extrusion method, mainly consists of polystyrene and are surrounded by thin reflector including TiO$^{2}$ (3 mm in thickness) are used for the WAGASCI modules to reduce the mass ratio of scintillator bars to water,
 because neutrino interactions in the scintillator bars are a background for the cross section measurements on H$_{2}$O.
 Each scintillator bar is sized as 1020$\times$25$\times$3 mm$^{3}$ including the reflector part, and 
-half of all the scintillator bars have 5-cm-interval slits to form the grid structure (Figure \ref{fig:wagasci_scinti_geometry} ). 
+half of all the scintillator bars have 5-cm-interval slits to form the hollow cuboid lattice (Figure \ref{fig:wagasci_scinti_geometry} ). 
 
 \begin{figure}[tbh]
 \begin{center}
@@ -36,17 +36,17 @@ half of all the scintillator bars have 5-cm-interval slits to form the grid stru
 % \includegraphics[width=0.6\linewidth]{fig/tmp.pdf}
 \end{center}
 \caption{
-Geometry of scintillators used for Wagasci modules.
+Geometry of scintillators used for WAGASCI modules.
 }
 \label{fig:wagasci_scinti_geometry}
 \end{figure}
 
 
-We will have two types of the Wagasci modules, a water-in module and a water-out module.
-The water-in Wagasci module has water in spaces of the grid structure.
+We will have two types of the WAGASCI modules, a water-in module and a water-out module.
+The water-in WAGASCI module has water in spaces of the hollow cuboid lattice.
 The total water mass serving as neutrino targets in the fiducial volume of the module is 188 kg,
 and the mass ratio of scintillator bars to water is 80 \%.
-The water-out Wagasci module doesn't have water inside the detector.
+The water-out WAGASCI module doesn't have water inside the detector.
 The total CH mass serving as neutrino target in the fiducial volume of the module is 47 kg,
 and the mass fraction of scintillator bars is 100 \%.
 
@@ -59,7 +59,7 @@ It is confirmed by measurements with cosmic rays that black painting on the surf
 
 
 
-32-channel arrayed MPPCs, as shown in the Fig. \ref{fig:wagasci_mppc}, are used for the modules.
+32-channel arrayed MPPCs, as shown in the Figure \ref{fig:wagasci_mppc}, are used for the modules.
 The surface of the fiber bundle is polished and directly attached onto the 32-channel arrayed MPPCs. The positions of 32 fibers on the bundle are aligned to fit the channels of MPPCs.
 The MPPC is a product of Hamamatsu Photonics, S13660(ES1), with suppressed noise rate of $\sim$6 kHz per channel at 0.5 p.e. threshold.
 For each MPPC channel, 716 pixels of APD are aligned in a shape of circle.
@@ -90,7 +90,7 @@ The data acquisition system used for this detector, including back-end boards, h
 To synchronize the DAQ system to J- PARC neutrino beam, pre-beam trigger and beam trigger are sent to the clock control card.
 The beam trigger signals are converted from optical signals to NIM signals at NIM module on the B2 floor.
 In addition, the information of spill number are delivered with 16-bit ECL level signals, and converted to an Ethernet frame by an FPGA evaluation board to be directly sent to the DAQ PC.
-The electronics readout scheme is shown in Fig. \ref{fig:wagasci_elec_scheme}.
+The electronics readout scheme is shown in Figure \ref{fig:wagasci_elec_scheme}.
 % The event of the WAGASCI module will be off-line matched with those of INGRID placed at the B2 floor and Proton Module by using the spill number information.
 
 \begin{figure}[tbh]
@@ -99,16 +99,16 @@ The electronics readout scheme is shown in Fig. \ref{fig:wagasci_elec_scheme}.
 % \includegraphics[width=0.6\linewidth]{fig/tmp.pdf}
 \end{center}
 \caption{
-Wagasci electronics readout scheme.
+WAGASCI electronics readout scheme.
 }
 \label{fig:wagasci_elec_scheme}
 \end{figure}
 
 
 \subsubsection{Water system}
-Pure water is filled to the water tank of the water-in Wagasci module as follows.
+Pure water is filled to the water tank of the water-in WAGASCI module as follows.
 First, the water storage tank located at the B2 floor of the NM pit is filled with water delivered from a water tap on the ground level through a long hose. 
 Second, the water is pumped to the other water storage tank though a water filler to produce pure water.
 Third, a compound preservative called Germall plus, which is the same preservative used in one of the sub-detectors of T2K ND280, FGD2, is put into the water to keep water from being bad.
-Then, the water is poured to the water-in Wagasci module, and it is kept in the module during the neutrino beam operation and not to be circulated.
+Then, the water is poured to the water-in WAGASCI module, and it is kept in the module during the neutrino beam operation and not to be circulated.
 
