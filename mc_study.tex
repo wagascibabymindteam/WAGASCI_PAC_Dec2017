@@ -1,23 +1,21 @@
 \section{MC studies}
 \label{sec:mc_study}
+\subsection{Simulation setup}
 
-\subsection{Detector simulation}
-Expected number of neutrino events in the water-in Wagasci detector is evaluated with Monte Carlo simulations. 
-Neutrino beam flux at the detector location is simulated by T2K neutrino flux generator, JNUBEAM, neutrino interactions with target materials are simulated by a neutrino interaction simulator, NEUT, detector responses are simulated using GEANT4-based simulation.
-The neutrino flux at the detector location, 1.5 degrees away from the J-PARC neutrino beam axis, is shown in Figure \ref{fig:b2flux}, and its mean neutrino energy is around 0.68 GeV.
+Simulation study was conducted by using the T2K neutrino flux generator, JNUBEAM, neutrino interaction simulator, NEUT, and Geant4 for the detector responses.
 
+The detector geometry in the simulation so far is different from the actual setup as shown in Fig. \ref{fig:wagasci_mc_geometry}.
+The active neutrino target region consists of four WAGASCI modules.
+The size of the WAGASCI module is same as the actual one: 100 cm $\times$ 100 cm in the x and y directions and 50 cm along the beam direction (z-direction).
+%An event display of a MC event in the WAGASCI detectors is shown in Figure \ref{fig:wagasci_event_display}.
+Two Side-MRD modules is installed at both sides of the WAGASCI modules, and each Side-MRD module consists of ten iron plates whose dimension is 3 cm (thickness) $\times$ 200 cm (height) $\times$ 320 cm (width). 
+The distance between the Side-MRD modules and WAGASCI modules is 80 cm.
+The downstream-MRD is equivalent to the Baby-MIND, but without the magnetic field.
+It consists of thirty iron plates whose dimension is  3 cm (thickness) $\times$ 200 cm (height) $\times$ 400 cm (width).
+The distance between the downstream-MRD modules and WAGASCI modules is 80 cm.
+Update of the study with the actual geometry is now underway.
 
-\subsubsection{Detector geometry}
-The detector geometry in the GEANT4-based simulation is slightly different from the actual detector as shown in Fig. \ref{fig:wagasci_mc_geometry}.
-The active neutrino target region consists of four Wagasci modules, and each Wagasci detector has the dimension with 100 cm $\times$ 100 cm in the x and y directions and 50 cm along the beam direction.
-%An event display of a MC event in the Wagasci detectors is shown in Figure \ref{fig:wagasci_event_display}.
-Two Side-MRD modules is installed at both sides of the Wagasci modules, and each Side-MRD module consists of ten iron plates whose dimension is 3 cm (thickness) $\times$ 200 cm (height) $\times$ 320 cm (width). 
-The distance between the Side-MRD modules and Wagasci modules is 80 cm.
-The downstream-MRD equivalent to the Baby-MIND is installed at the downstream of the Wagasci modules.
-The downstream-MRD consists of thirty iron plates whose dimension is  3 cm (thickness) $\times$ 200 cm (height) $\times$ 400 cm (width).
-The distance between the downstream-MRD modules and Wagasci modules is 80 cm.
-
-\begin{figure}[tbh]
+\begin{figure}[tbhp]
 \begin{center}
 \includegraphics[width=0.8\linewidth]{fig/wagasci_mc_geometry.pdf}
 % \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
@@ -33,36 +31,26 @@ Geometry of the detectors in the Monte Carlo simulation.}
 %% \includegraphics[width=0.8\linewidth]{fig/all_detector2.pdf}
 %\end{center}
 %\caption{
-%An event display of MC event in Wagasci detectors. Green lines are scintillators and red circles are the hit channels.}
+%An event display of MC event in WAGASCI detectors. Green lines are scintillators and red circles are the hit channels.}
 %\label{fig:wagasci_mc_geometry}
 %\end{figure}
 
 % In order to estimate backgrounds from neutrino interactions in the wall and floor of the experimental hall, the geometry of the experimental hall is implemented in the GEANT4-based detector simulation.
 
-
-\subsubsection{Response of detector components}
-The energy deposit inside the scintillator is converted into the number of photons. 
+To simulate the signal, the energy deposit inside the scintillator is converted into the number of photons. 
 The effects of collection and attenuation of the light in the scintillator and the WLS fiber are simulated, and the MPPC response is also taken into account. 
 The light yield is smeared according to statistical fluctuations and electrical noise.
 
 
-\subsection{Track reconstruction}
-To select neutrino interaction from the hit patterns, a track reconstruction algorithm is developed.
-The flow of the track reconstruction is as follows.
-\begin{enumerate}
-\item Two-dimensional track reconstruction in each sub-detectors
-\item Track matching among the sub-detectors
-\item Three -dimensional track reconstruction
-\end{enumerate}
-
-Add explanation about two-dim reco, track matching and three-dim reco here.
-
-
 \subsection{Event selection}
 
-First, the events with the track which starts in 5 cm from the wall of the Wagasci module are rejected to remove the background from the outside.
-% as shown in Fig. \ref{fig:fv_cut}.
+Tracks are reconstructed in two-dimensional planes in each sub-detector.
+Then, track matching among the sub-detectors and three-dimensional track reconstruction are performed.
+These analysis tools have been developed from the software tools by the T2K INGRID and in mature stage already.
 
+The events are selected as follows.
+The starting point of the track is required to be 5~cm away from the edge of the WAGASCI module. This is to remove the background from the outside.
+% as shown in Fig. \ref{fig:fv_cut}.
 % \begin{figure}[tbh]
 % \begin{center}
 %   \begin{subfigure}{0.48\textwidth}
@@ -73,15 +61,14 @@ First, the events with the track which starts in 5 cm from the wall of the Wagas
 %    \end{subfigure}    
 %    \end{center}
 %  \caption{Event selection with the vertex of the track.
-% Blue hist. are events from the Wagasci modules, green hist. are events from the experimental hall, % and yellow hist. are events from the Side-MRD modules and the downstream-MRD.
+% Blue hist. are events from the WAGASCI modules, green hist. are events from the experimental hall, % and yellow hist. are events from the Side-MRD modules and the downstream-MRD.
 % }
 % \label{fig:fv_cut}
 % \end{figure}
-
-Second, to reject backgrounds from NC and neutral particles, the longest tracks are required to penetrate more than one (five) iron plates in Side-MRD modules (Baby-MIND). 
+The longest track has to penetrate more than one (five) iron plates in Side-MRD modules (Baby-MIND).
+This cut select a muon track and rejects backgrounds from NC and neutral particles.
 %as shown in Figure \ref{fig:penetrated_iron_plates_cut}.
-Then, in order to measure muon momentum, the longest tracks are required to stop in MRDs (Side-MRD modules and Baby-MIND) or penetrate all iron plates.
-
+Then, in order to determine the muon momentum, it is required that the longest track stops in MRDs (Side-MRD modules and Baby-MIND) or penetrate all iron plates.
 % \begin{figure}[tbh]
 %  \begin{center}
 %   \begin{subfigure}{0.48\textwidth}
@@ -92,8 +79,8 @@ Then, in order to measure muon momentum, the longest tracks are required to stop
 %     \end{subfigure}    
 %     \end{center}
 %   \caption{
-% Event selection with the number of the penetrated iron plates in the Side-MRD modules (left) and the Baby-MIIND (right).
-% Blue and red hist. are events from the Wagasci modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
+% Event selection with the number of the penetrated iron plates in the side-MRD modules (left) and the Baby-MIIND (right).
+% Blue and red hist. are events from the WAGASCI modules, green hist. are events from the experimental hall, and yellow hist. are events from the Side-MRD modules and the Baby-MIND.
 % }
 % \label{fig:penetrated_iron_plates_cut}
 % \end{figure}
@@ -101,113 +88,96 @@ Then, in order to measure muon momentum, the longest tracks are required to stop
 % \subsection{Selected events}
 
 
-Table \ref{tab:expected_num_events_neutrino_beam} and \ref{tab:expected_num_events_antineutrino_beam}  show numbers of the selected events in one water-in Wagasci module after each event selection in neutrino-mode and antineutrino-mode respectively.
-As for the neutrino-mode, 8478 CC events are expected with $1 \times 10^{21}$  POT, and the purity is 78.0 \%.
-The main background for the neutrino-mode is the neutrino interactions in the scintillators inside the Wagasci detector.
-As for the antineutrino-mode, 3331 CC events are expected with $1 \times 10^{21}$  POT, and the purity is 59.5 \%.
-The main background for the antineutrino-mode is the wrong sign contamination from $\nu_{\mu}$ events and the antineutrino interactions in the scintillators inside the Wagasci detector.
-
-\begin{table}[htb]
+Table~\ref{tab:expected_num_events}  shows numbers of the selected events in one water-in WAGASCI module after the event selection.
+We expect 4,239 (1,666) events from charged-current interaction on water with $5 \times 10^{20}$  POT in (anti)neutrino-mode with one water-in WAGASCI module.
+The purity, when interactions on CH is counted as background, is 78\% for the neutrino-mode.
+There is a significant contamination from the wrong-sign (neutrino) interaction for antineutrino-mode, however, we expect that
+it will be removed with efficiency higher than 90\% by Baby MIND.
+%\begin{table}[htb]
+%  \begin{center}
+%    \caption{Expected number of the neutrino-candidate events in one water-in WAGASCI module with 1$\times 10^{21}$ POT in neutrino-mode.}
+%    \begin{tabular}{c|ccc|c} \hline
+%Cut   & CC & NC & Scinti Bkg. & Total \\ \hline
+%Reconstructed & 18093.2 & 699.7 & 4698.3 & 23491.2 \\
+%FV & 15150.8 & 588.4 & 3934.8 & 19673.9 \\
+%Pene. iron & 11264.3 & 237.3 & 2875.4 & 14377.0 \\
+%Stop/Penetrate MRDs & 8478.2 & 214.0 & 2173.1 & 10865.2 \\ \hline
+%after all cuts & 78.0 \% & 2.0 \% & 20.0 \% & 100 \% \\
+%\hline
+%    \end{tabular}
+%    \label{tab:expected_num_events_neutrino_beam}
+%  \end{center}
+%\end{table}
+%\begin{table}[htb]
+%  \begin{center}
+%    \caption{Expected number of the antineutrino-candidate events in one water-in WAGASCI module with 1$\times 10^{21}$ POT in antineutrino-mode.}
+%    \begin{tabular}{c|cccc|c} \hline
+% Cut   & CC & NC & Scinti Bkg. & Wrong sign bkg & Total \\ \hline
+%Reconstructed & 6499.7 & 107.3 & 2234.4 & 2330.8 & 11172.1 \\ 
+%FV & 5457.9 & 89.3 & 1873.5 & 1946.6 & 9367.1 \\ 
+%Pene. iron & 4172.3 & 30.8 & 1440.9 & 1560.6 & 7204.6 \\ 
+%Stop/Penetrate MRDs & 3331.5 & 28.5 & 1120.3 & 1121.2 & 5601.5 \\ \hline
+%after all cuts & 59.5 \% & 0.5 \% & 20.0 \% &  20.0 \% & 100 \% \\
+%\hline
+%    \end{tabular}
+%    \label{tab:expected_num_events_antineutrino_beam}
+%  \end{center}
+%\end{table}
+\begin{table}[htbp]
   \begin{center}
-    \caption{Expected number of the neutrino-candidate events in one water-in Wagasci module with 1$\times 10^{21}$ POT in neutrino-mode.}
-    \begin{tabular}{c|ccc|c} \hline
-Cut   & CC & NC & Scinti Bkg. & Total \\ \hline
-Reconstructed & 18093.2 & 699.7 & 4698.3 & 23491.2 \\
-FV & 15150.8 & 588.4 & 3934.8 & 19673.9 \\
-Pene. iron & 11264.3 & 237.3 & 2875.4 & 14377.0 \\
-Stop/Penetrate MRDs & 8478.2 & 214.0 & 2173.1 & 10865.2 \\ \hline
-after all cuts & 78.0 \% & 2.0 \% & 20.0 \% & 100 \% \\
+    \caption{Expected number of the selected neutrino-candidate events in one water-in WAGASCI module with $5\times 10^{20}$ POT in each of neutrino-mode and antineutrino-mode.
+      Note that the wrong sign component will be reduced by one order by applying the charge selection by Baby MIND.}
+    \begin{tabular}{ccccc} \hline
+   & CC on water & NC on water & Interaction on CH  & wrong sign interaction\\ \hline
+   $\nu$-mode & 4239 & 107 & 1087 & (negligible) \\ \hline
+   anti-$\nu$-mode & 1666 & 14 & 560 & (561) \\
 \hline
     \end{tabular}
-    \label{tab:expected_num_events_neutrino_beam}
-  \end{center}
-\end{table}
-
-\begin{table}[htb]
-  \begin{center}
-    \caption{Expected number of the antineutrino-candidate events in one water-in Wagasci module with 1$\times 10^{21}$ POT in antineutrino-mode.}
-    \begin{tabular}{c|cccc|c} \hline
- Cut   & CC & NC & Scinti Bkg. & Wrong sign bkg & Total \\ \hline
-Reconstructed & 6499.7 & 107.3 & 2234.4 & 2330.8 & 11172.1 \\ 
-FV & 5457.9 & 89.3 & 1873.5 & 1946.6 & 9367.1 \\ 
-Pene. iron & 4172.3 & 30.8 & 1440.9 & 1560.6 & 7204.6 \\ 
-Stop/Penetrate MRDs & 3331.5 & 28.5 & 1120.3 & 1121.2 & 5601.5 \\ \hline
-after all cuts & 59.5 \% & 0.5 \% & 20.0 \% &  20.0 \% & 100 \% \\
-\hline
-    \end{tabular}
-    \label{tab:expected_num_events_antineutrino_beam}
-  \end{center}
-\end{table}
-
-
-Table \ref{tab:expected_num_cc_events_neutrino_beam} and \ref{tab:expected_num_cc_events_antineutrino_beam}  show numbers of the charged-current events in the water-in Wagasci module after all event selection with a classification based on interactions at a vertex with 1$\times 10^{21}$ POT in neutrino-mode and antineutrino-mode respectively.
-
-\begin{table}[htb]
-  \begin{center}
-    \caption{Expected number of the charged-current events in the water-in Wagasci module after the event selections with 1$\times 10^{21}$ POT in neutrino-mode with a classification based on interactions at a vertex.}
-    \begin{tabular}{cccc|c} \hline
-CCQE & MEC & CCRes & CCDIS & Total \\ \hline
-3716.3 & 747.0 & 2081.3 & 1132.3 & 7676.9 \\ \hline
-48.4 \% & 9.7 \% & 27.1 \% & 14.7 \% & 100 \% \\
-\hline
-    \end{tabular}
-    \label{tab:expected_num_cc_events_neutrino_beam}
-  \end{center}
-\end{table}
-
-\begin{table}[htb]
-  \begin{center}
-    \caption{Expected number of the charged-current events in the water-in Wagasci module after the event selections with 1$\times 10^{21}$ POT in antineutrino-mode with a classification based on interactions at a vertex.}
-    \begin{tabular}{cccc|c} \hline
-CCQE & MEC & CCRes & CCDIS & Total \\ \hline
-2522.0 & 362.8 & 765.8 & 765.8 & 4416.4 \\ hline
-57.1 \% & 8.2 \% & 17.3 \% & 17.3 \% & 100 \% \\
-\hline
-    \end{tabular}
-    \label{tab:expected_num_cc_events_antineutrino_beam}
+    \label{tab:expected_num_events}
   \end{center}
 \end{table}
 
 
-Table \ref{tab:expected_num_ccfsi_events_neutrino_beam} and \ref{tab:expected_num_ccfsi_events_antineutrino_beam}  show numbers of the charged-current events in one water-in Wagasci module after all event selection with a classification based on particles after final state interactions with 1$\times 10^{21}$ POT in neutrino-mode and antineutrino-mode respectively.
-
-\begin{table}[htb]
+Table \ref{tab:expected_num_cc_events} and \ref{tab:expected_num_ccfsi_events} summarize
+contributions classified by the interaction types and final state topologies for the selected charged current-interaction events, respectively.
+%
+\begin{table}[htbp]
   \begin{center}
-    \caption{Expected number of the charged-current events in one water-in Wagasci module after the event selections with 1$\times 10^{21}$ POT in neutrino-mode with a classification based on particles after final state interactions.}
-    \begin{tabular}{cccc|c} \hline
-CC0$\pi$ & CC1$\pi$ & CC2$\pi$ & CCn$\pi$  & Total \\ \hline
-5423.1 & 1684.3 & 242.9 & 701.1 & 8051.4 \\ \hline
-67.4 \% & 20.9 \% & 3.0 \% & 8.7 \% & 100 \% \\
+    \caption{Interaction types for the selected charged-current events.}
+    \begin{tabular}{c|cccc} \hline
+& CCQE & 2p2h & CC resonant $\pi$  & CC-DIS \\ \hline
+$\nu$-mode & 48.4 \% & 9.7 \% & 27.1 \% & 14.7 \% \\
+anti-$\nu$-mode &  57.1 \% & 8.2 \% & 17.3 \% & 17.3 \% \\
 \hline
     \end{tabular}
-    \label{tab:expected_num_ccfsi_events_neutrino_beam}
+    \label{tab:expected_num_cc_events}
   \end{center}
 \end{table}
-
-\begin{table}[htb]
+%
+\begin{table}[htbp]
   \begin{center}
-    \caption{Expected number of the charged-current events in one water-in Wagasci module after the event selections with 1$\times 10^{21}$ POT in antineutrino-mode with a classification based on  particles after final state interactions.}
-    \begin{tabular}{cccc|c} \hline
-CC0$\pi$ & CC1$\pi$ & CC2$\pi$ & CCn$\pi$  & Total \\ \hline
-2529.3 & 520.0 & 37.9 & 96.0 & 3183.2 \\ \hline
-79.5 \% & 16.3 \% & 1.2 \% & 3.0 \% & 100 \% \\
-\hline
+    \caption{Final state topologies for the selected charged-current events.}
+    \begin{tabular}{c|cccc} \hline
+& CC0$\pi$ & CC1$\pi$ & CC2$\pi$ & CCn$\pi$ \\ \hline
+      $\nu$-mode & 67.4 \% & 20.9 \% & 3.0 \% & 8.7 \% \\ \hline
+      anti-$\nu$-mode & 79.5 \% & 16.3 \% & 1.2 \% & 3.0 \% \\\hline
     \end{tabular}
-    \label{tab:expected_num_ccfsi_events_antineutrino_beam}
+    \label{tab:expected_num_ccfsi_events}
   \end{center}
 \end{table}
-
 
 Figure \ref{fig:angle_allcut} shows the reconstructed angles of the longest tracks in the selected events in the neutrino-mode and the anti-neutrino mode.
 Figure \ref{fig:endpoint_longest_track} shows the iron plane numbers in Side-MRD and Baby-MIND corresponding to the end points of the longest tracks in the selected events in the neutrino-mode and the anti-neutrino mode.
-
+%
 \begin{figure}[tbh]
  \begin{center}
   \begin{subfigure}{0.48\textwidth}
-     \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonAngle_StoppedOrThroughGoing.pdf}
+%     \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonAngle_StoppedOrThroughGoing.pdf}
+     \includegraphics[width=\textwidth]{fig/FHCMuonAngle_StoppedOrThroughGoing.pdf}
     \end{subfigure}
   \begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonAngle_StoppedOrThroughGoing.pdf}
+%    \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonAngle_StoppedOrThroughGoing.pdf}
+    \includegraphics[width=\textwidth]{fig/RHCMuonAngle_StoppedOrThroughGoing.pdf}
     \end{subfigure}    
     \end{center}
   \caption{
@@ -215,20 +185,24 @@ The reconstructed angles of the longest tracks in the selected events in the neu
 }
 \label{fig:angle_allcut}
 \end{figure}
-
+%
 \begin{figure}[tbh]
  \begin{center}
   \begin{subfigure}{0.48\textwidth}
-     \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
+     \includegraphics[width=\linewidth]{fig/FHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
+%     \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
     \end{subfigure}
   \begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
+    \includegraphics[width=\linewidth]{fig/FHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
+%    \includegraphics[width=0.55\linewidth, angle=270]{fig/FHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
     \end{subfigure}  
      \begin{subfigure}{0.48\textwidth}
-     \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
+     \includegraphics[width=\linewidth]{fig/RHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
+%     \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonPenetration_SideMRD_StoppedOrThroughGoing.pdf}
     \end{subfigure}
   \begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
+    \includegraphics[width=\linewidth]{fig/RHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
+%    \includegraphics[width=0.55\linewidth, angle=270]{fig/RHCMuonPenetration_DownstreamMRD_StoppedOrThroughGoing.pdf}
     \end{subfigure}    
     \end{center}
   \caption{
@@ -257,8 +231,8 @@ Iron plane numbers in Side-MRD (left) and Baby-MIND (right) corresponding to the
 % \end{table}
 
 % Figure \ref{fig:eff_muon_angle_momentum_neutrino} shows detection efficiencies of muon tracks in the selected events as a function of muon's true angle and true momentum.
-% The efficiency in the large angle region is low because Side-MRD modules only cover sides of the Wagasci modules.
-% The efficiency in the low momentum region is also low because more than two hits  are required to reconstruct the track in the Wagasci detector.
+% The efficiency in the large angle region is low because Side-MRD modules only cover sides of the WAGASCI modules.
+% The efficiency in the low momentum region is also low because more than two hits  are required to reconstruct the track in the WAGASCI detector.
 
 % \begin{figure}[tbh]
 %  \begin{center}
@@ -276,24 +250,24 @@ Iron plane numbers in Side-MRD (left) and Baby-MIND (right) corresponding to the
 %\end{figure}
 
 
-\subsection{Cross section measurements}
-The flux-averaged $\nu_{\mu}$ ($\overline{\nu_{\mu}}$) CC inclusive cross sections on water and hydrocarbon are calculated from the number of selected events
-using the background subtraction and efficiency correction
-\begin{equation}
-\sigma_{CC} = \frac{N_{sel}-N_{BG}}{\phi T \epsilon},
-\end{equation}
-where $N_{sel}$ is the number of selected events from real data,
-$N_{BG}$ is the number of selected background events predicted by MC simulation,
-$\phi$ is the integrated $\nu_{\mu}$ flux, $T$ is the number of target nucleons,
-and $\epsilon$ is the detection efficiency for CC events predicted by MC simulation.
-% The $\nu_{\mu}$ CC inclusive cross sections on water and hydrocarbon are measured from the number of selected events
-in the water and hydrocarbon regions in the central detector.
-% The $\nu_{\mu}$ CC inclusive cross section ration on water to hydrocarbon is measured 
-% using the two results.
-Finally, we will cancel the dominant systematic error, the neutrino flux error, by comparing the cross-section results from two neutrino targets, water and hydrocarbon, having almost identical neutrino fluxes, and measure the water to hydrocarbon charged current cross section ratio with 3\% precision, which is achieved in the INGRID measurement \cite{ingrid_ccinclusive}.
-% 3\% precision.
+%\subsection{Cross section measurements}
+%The flux-averaged $\nu_{\mu}$ ($\overline{\nu_{\mu}}$) CC inclusive cross sections on water and hydrocarbon are calculated from the number of selected events
+%using the background subtraction and efficiency correction
+%\begin{equation}
+%\sigma_{CC} = \frac{N_{sel}-N_{BG}}{\phi T \epsilon},
+%\end{equation}
+%where $N_{sel}$ is the number of selected events from real data,
+%$N_{BG}$ is the number of selected background events predicted by MC simulation,
+%$\phi$ is the integrated $\nu_{\mu}$ flux, $T$ is the number of target nucleons,
+%and $\epsilon$ is the detection efficiency for CC events predicted by MC simulation.
+%% The $\nu_{\mu}$ CC inclusive cross sections on water and hydrocarbon are measured from the number of selected events
+%in the water and hydrocarbon regions in the central detector.
+%% The $\nu_{\mu}$ CC inclusive cross section ration on water to hydrocarbon is measured 
+%% using the two results.
+%Finally, we will cancel the dominant systematic error, the neutrino flux error, by comparing the cross-section results from two neutrino targets, water and hydrocarbon, having almost identical neutrino fluxes, and measure the water to hydrocarbon charged current cross section ratio with 3\% precision, which is achieved in the INGRID measurement \cite{ingrid_ccinclusive}.
+%% 3\% precision.
 
 
 
-In the water target events, the background from interaction with scintillators has to be subtracted by using the measurement of the hydrocarbon target.
+%In the water target events, the background from interaction with scintillators has to be subtracted by using the measurement of the hydrocarbon target.
 
